@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultPageSite.Master.cs" Inherits="LoanWebApplication4.DefaultPageSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>iCredit</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+   
+</head>
+<body style="margin:0;overflow:hidden" >
+    <form runat="server" style="margin:0">
+    <div class="page">
+        <div class="header" >
+            <div class="title">
+                <h1 style="font-variant:normal">
+                    
+                    iCredit
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                        <a href="../Account/ChangePassword.aspx">
+                            <asp:LoginName ID="HeadLoginName" runat="server" /></a>
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="position:relative;z-index:2000;">
+                    <tr>
+                        <td>
+                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                                IncludeStyleBlock="false" Orientation="Horizontal" 
+                                >
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                                    <asp:MenuItem Text="Members" Value="Members">
+                                        <asp:MenuItem NavigateUrl="~/admin/Groups.aspx" Text="Groups" Value="Groups">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/Members.aspx" Text="Individuals" 
+                                            Value="Individuals"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Loan" Value="Loan">
+                                        <asp:MenuItem NavigateUrl="~/admin/NewEmployeeLoan.aspx" 
+                                            Text="New Employee Loan" Value="New Employee Loan"></asp:MenuItem>
+                                        <asp:MenuItem Text="Repayment" Value="Repayment" NavigateUrl="~/admin/SearchPage.aspx">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/LoanDefaults.aspx" Text="Defaults" Value="Defaults">
+                                        </asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Investment" Value="Investment">
+                                        <%--<asp:MenuItem NavigateUrl="~/admin/ApplyInsterest.aspx" Text="Apply Interest" 
+                                            Value="Apply Interest"></asp:MenuItem>--%>
+                                        <asp:MenuItem NavigateUrl="~/admin/ApplyAccountTypeFeatures.aspx" 
+                                            Text="Apply Account Type Features" Value="Apply Account Type Features"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/SearchPage.aspx" Text="Deposit and Withdrawal" 
+                                            Value="Deposit and Withdrawal"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/RollOverInvestment.aspx" 
+                                            Text="Rollover Investment" Value="Rollover Investment"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/admin/MobileBankersList.aspx" 
+                                        Text="Mobile Bankers" Value="Mobile Bankers"></asp:MenuItem>
+                                    <asp:MenuItem Text="Settings" Value="Settings">
+                                        <asp:MenuItem NavigateUrl="~/admin/Branches.aspx" Text="Branches" 
+                                            Value="Branches"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/CompanyProfile.aspx" Text="Company Profile" Value="Company Profile">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem Text="Loan &amp; Investment" Value="Loan &amp; Investment">
+                                            <asp:MenuItem NavigateUrl="~/admin/LoanSsttings.aspx" Text="General" Value="General">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/LoanDurations.aspx" Text="Durations" 
+                                                Value="Durations">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/LoanTypesSetup.aspx" Text="Loan Types" 
+                                                Value="Loan Types"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/InvestmentTypesSetup.aspx" 
+                                                Text="Investment Types" Value="Investment Types"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/RepaymentFrequency.aspx" Text="Loan Repayment Frequency"
+                                            Value="Loan Repayment Frequency"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Setups/IdentityTypes.aspx" Text="Identification Types"
+                                            Value="Identification Types"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/UserManagementHome.aspx" 
+                                            Text="User Management" Value="User Management"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/AccountTypesSetup.aspx" Text="Account Types" 
+                                            Value="Account Types"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/OccupationsSetup.aspx" Text="Occupations" 
+                                            Value="Occupations"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/admin/Collaterals.aspx" Text="Collaterals" 
+                                            Value="Collaterals"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/About.aspx" Text="Reports" Value="Reports">
+                                        <asp:MenuItem 
+                                            Text="Loans" Value="Loans">
+                                            <asp:MenuItem NavigateUrl="~/admin/LoansDisbursedReport.aspx" 
+                                                Text="Disbursed Loans" Value="Disbursed Loans"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/OverdueLoansReport.aspx" 
+                                                Text="Overdue Loans" Value="Overdue Loans"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/CustomerStatementReport_Loan.aspx" 
+                                                Text="Loan Statement" Value="Loan Statement"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/LoansRepaymentReport.aspx" 
+                                                Text="Loan Repayments" Value="Loan Repayments"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                        <asp:MenuItem 
+                                            Text="Investments" Value="Investments">
+                                            <asp:MenuItem NavigateUrl="~/admin/CustomerStatementReport_Investment_New.aspx" 
+                                                Text="Customer Investment Statement Type 1" 
+                                                Value="Customer Investment Statement">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/CustomerStatementReport_Investment_New_Type2.aspx" 
+                                                Text="Customer Investment Statement Type 2" 
+                                                Value="Customer Investment Statement">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/CashCollectionReportReport.aspx" 
+                                                Text="Cash Collection Report" Value="Cash Collection Report"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/ContributionsReportForMobileBanker.aspx" 
+                                                Text="Cash Collection By Mobile Banker" 
+                                                Value="Cash Collection By Mobile Banker"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/ContributionsReport.aspx" 
+                                                Text="Deposits Report" Value="Deposits Report"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/InvestmentsReport.aspx" 
+                                                Text="Investments Report" Value="Investments Report"></asp:MenuItem>
+                                         <%--   <asp:MenuItem Text="Investments Report Type 2" 
+                                                Value="Investments Report Type 2" 
+                                                NavigateUrl="~/admin/InvestmentsReport_regular.aspx"></asp:MenuItem>--%>
+                                            <asp:MenuItem NavigateUrl="~/admin/MaturedInvestmentsReport.aspx" 
+                                                Text="Matured Investments Report" Value="Matured Investments Report"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/WithdrawalsReport.aspx" 
+                                                Text="Withdrawals Report" Value="Withdrawals Report"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/WithdrawalsReportForMobileBanker.aspx" 
+                                                Text="Withdrawals By Mobile Banker" Value="Withdrawals By Mobile Banker">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/TotalCashDisbursedReport.aspx" 
+                                                Text="Cash Withdrawal Summary" Value="Cash Withdrawal Summary">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/TotalCashReceivedReport.aspx" 
+                                                Text="Cash Received Summary" Value="Cash Received Summary"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/AppliedAccountTypeFeaturesReport.aspx" 
+                                                Text="Applied Account Type Features Report" 
+                                                Value="Applied Account Type Features Report"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/admin/TotalAppliedInterestAndDeductionsReport.aspx" 
+                                                Text="Applied Interests and Deductions Summary" 
+                                                Value="Applied Interests and Deductions Summary"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                       <%-- <asp:MenuItem Text="BoG" Value="BoG">
+                                            <asp:MenuItem NavigateUrl="~/admin/BoG/MF7C.aspx" Text="MF7C" 
+                                                Value="MF7C"></asp:MenuItem>
+                                        </asp:MenuItem>--%>
+                                    </asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </td>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" align="right">
+                                <tr valign="middle">
+                                    <td>
+                                        &nbsp;
+                                        <asp:TextBox ID="txtSearch" runat="server" Width="200px"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:ImageButton ID="ImageButton1" ImageUrl="../images/searchButton.png" runat="server"
+                                            OnClick="ImageButton1_Click" ValidationGroup="vg1" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="main" style="overflow:hidden" >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

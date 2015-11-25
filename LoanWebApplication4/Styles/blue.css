@@ -1,0 +1,70 @@
+﻿.blue .accordion
+{
+    border-top: 1px solid #013d6c;
+    border-right: 1px solid #013d6c;
+    border-left: 1px solid #013d6c;
+}
+.blue .accordion, .blue .accordion li
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.blue .accordion a
+{
+    padding: 5px 5px 5px 10px;
+    background: #F5FAFE;
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    border-bottom: 0px solid #013d6c;
+    border-top: 1px solid #4695d3;
+    border-top-color: #E5E5E5;
+    border-bottom-color: #E5E5E5;
+}
+.blue .accordion ul a
+{
+    padding: 5px 5px 5px 20px;
+}
+.blue .accordion a.dcjq-parent, .blue .accordion a.dcjq-parent:hover
+{
+    padding: 5px 5px 5px 10px;
+    background: #4B6C9E;
+    color: White;
+}
+.blue .accordion a.dcjq-parent.active
+{
+    background: #4B6C9E url(images/checkers.png) repeat 0 0;
+    color: #FFFFFF;
+}
+.RightContentHeader
+{
+    padding: 5px 5px 5px 10px;
+    background: #4B6C9E; /*url(images/checkers.png) repeat 0 0;*/
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.RightContentBody
+{
+    background: #F5FAFE;
+    padding: 20px;
+}
+.blue .accordion a:hover
+{
+    background: #EAF4FD;
+}
+.blue .accordion a:active
+{
+}
+
+a:active
+{
+    background: #EAF4FD;
+}
+
+ul li a b
+{
+    color: Green;
+    background: white;
+}

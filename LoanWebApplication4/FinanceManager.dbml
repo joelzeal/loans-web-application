@@ -1,0 +1,903 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FINANCEMANAGER_ImperialTrust" Class="FinanceManagerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\sql2008_r2;Initial Catalog=FINANCEMANAGER_ImperialTrust;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="FINANCEMANAGERConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Collaterals" Member="Collaterals">
+    <Type Name="Collateral">
+      <Column Name="CollateralID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RepaymentSchedule" Member="RepaymentSchedules">
+    <Type Name="RepaymentSchedule">
+      <Column Name="RepaymentScheduleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RepaymentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExpectedRepaymentAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IsPaymentMade" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InterestPayment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PrincipalPayment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Member_RepaymentSchedule" Member="Member" ThisKey="MemberID" OtherKey="MemberId" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContributionSchedule" Member="ContributionSchedules">
+    <Type Name="ContributionSchedule">
+      <Column Name="ContributionScheduleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvestmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContributionDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExpectedContributionAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IsContributionMade" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Investment_ContributionSchedule" Member="Investment" ThisKey="InvestmentId" OtherKey="InvestmentID" Type="Investment" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GroupMembers" Member="GroupMembers">
+    <Type Name="GroupMember">
+      <Column Name="GroupMemberID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Member_GroupMember" Member="Member" ThisKey="MemberID" OtherKey="MemberId" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="LoanGroup_GroupMember" Member="LoanGroup" ThisKey="GroupID" OtherKey="GroupId" Type="LoanGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Guarantors" Member="Guarantors">
+    <Type Name="Guarantor">
+      <Column Name="GuarantorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GuarantorFirstName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="GuarantorLastName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="GuarantorPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(600)" CanBeNull="true" />
+      <Column Name="ResidentialAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BusinessAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OtherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdentityTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdentityNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Holidays" Member="Holidays">
+    <Type Name="Holiday">
+      <Column Name="HolidayID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HolidayDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IdentificationTypes" Member="IdentificationTypes">
+    <Type Name="IdentificationType">
+      <Column Name="IdentificationTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InterestRateTypes" Member="InterestRateTypes">
+    <Type Name="InterestRateType">
+      <Column Name="InterestRateTypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="InterestRateType_Loan" Member="Loans" ThisKey="InterestRateTypeId" OtherKey="InterestTypeId" Type="Loan" />
+      <Association Name="InterestRateType_Investment" Member="Investments" ThisKey="InterestRateTypeId" OtherKey="InterestTypeId" Type="Investment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvestmentDurations" Member="InvestmentDurations">
+    <Type Name="InvestmentDuration">
+      <Column Name="InvestmentDurationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumberOfMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NumberOfDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvestmentTypes" Member="InvestmentTypes">
+    <Type Name="InvestmentType">
+      <Column Name="InvestmentTypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanDurations" Member="LoanDurations">
+    <Type Name="LoanDuration">
+      <Column Name="LoanDurationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumberOfMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanPenalty" Member="LoanPenalties">
+    <Type Name="LoanPenalty">
+      <Column Name="LoanPenaltyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PenaltyRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PenaltyAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PenaltyDurationInMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BalanceOVerdue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IsReleived" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Loan_LoanPenalty" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanPresets" Member="LoanPresets">
+    <Type Name="LoanPreset">
+      <Column Name="LoanPresetId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumberOfMonths" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InsterestRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberDeposits" Member="MemberDeposits">
+    <Type Name="MemberDeposit">
+      <Column Name="MemberDepositId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberDepositAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DepositedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DepositDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReceivedByUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Member_MemberDeposit" Member="Member" ThisKey="MemberId" OtherKey="MemberId" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parameters" Member="Parameters">
+    <Type Name="Parameter">
+      <Column Name="ParameterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReceiptNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RepaymentFrequencies" Member="RepaymentFrequencies">
+    <Type Name="RepaymentFrequency">
+      <Column Name="RepaymentFrequencyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NumberOfDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ConversionUnit" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="RepaymentFrequency_Loan" Member="Loans" ThisKey="RepaymentFrequencyId" OtherKey="RepaymentFrequencyId" Type="Loan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MembersView" Member="MembersViews">
+    <Type Name="MembersView">
+      <Column Name="Member" Type="System.String" DbType="NVarChar(354)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwGroupInvestment" Member="vwGroupInvestments">
+    <Type Name="vwGroupInvestment">
+      <Column Name="TotalContribution" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsMatured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InsterstRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DurationDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaturedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ContributionFreqAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ContributionFrquency" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InvestmentDuration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InterestTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwGroupLoan" Member="vwGroupLoans">
+    <Type Name="vwGroupLoan">
+      <Column Name="Principal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InterestTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RawDurationEntered" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ExpectedRepaymentEndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="totalRepayment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="RepaymentFreqDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LoanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InterestTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanDurationDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CollateralName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CollateralDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="GroupDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwGroups" Member="vwGroups">
+    <Type Name="vwGroup">
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupMemberCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwGuarantor" Member="vwGuarantors">
+    <Type Name="vwGuarantor">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(352)" CanBeNull="true" />
+      <Column Name="GuarantorId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwLoanRepayment" Member="vwLoanRepayments">
+    <Type Name="vwLoanRepayment">
+      <Column Name="RepaymentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RepaymentAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RepaymentBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RepaymentScheduleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RepaidWithInvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReceiptNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RepaymentAmountInWords" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TotalRepayment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemberFixedDepositInvestment" Member="vwMemberFixedDepositInvestments">
+    <Type Name="vwMemberFixedDepositInvestment">
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(301)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalContribution" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsMatured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InsterstRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DurationDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaturedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ContributionFreqAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InvestmentDuration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InterestTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="GroupAccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalWithdrawal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemberInvestment" Member="vwMemberInvestments">
+    <Type Name="vwMemberInvestment">
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(301)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalContribution" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsMatured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InsterstRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DurationDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaturedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ContributionFreqAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ContributionFrquency" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InvestmentDuration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InterestTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="GroupAccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemberLoan" Member="vwMemberLoans">
+    <Type Name="vwMemberLoan">
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(352)" CanBeNull="true" />
+      <Column Name="Principal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InterestTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RawDurationEntered" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ExpectedRepaymentEndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="totalRepayment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="RepaymentFreqDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LoanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InterestTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanDurationDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CollateralName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CollateralDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalPenalty" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemberSUSUInvestment" Member="vwMemberSUSUInvestments">
+    <Type Name="vwMemberSUSUInvestment">
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(301)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalContribution" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsMatured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InsterstRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DurationDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaturedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ContributionFreqAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InvestmentDuration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="GroupAccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalWithdrawal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwRepaymentSchedule" Member="vwRepaymentSchedules">
+    <Type Name="vwRepaymentSchedule">
+      <Column Name="Expr1" Type="System.String" DbType="NVarChar(67)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwSUSUContributionReceipt" Member="vwSUSUContributionReceipts">
+    <Type Name="vwSUSUContributionReceipt">
+      <Column Name="ContributionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvestmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContributionAmount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContributionBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RecievedBy" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ContributionScheduleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContributionAmountInWords" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReceiptNumber" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TotalContribution" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemberInvestmentWithTotalContributionAndWithdrawal" Member="vwMemberInvestmentWithTotalContributionAndWithdrawals">
+    <Type Name="vwMemberInvestmentWithTotalContributionAndWithdrawal">
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InsterstRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContributionFrequencyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InterestTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ContributionFreqAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InvestmentCalculationStartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsMatured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DurationTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaturedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InvestmentTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TotalContrilbution" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TotalWithdrawal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DurationDescription" Type="System.String" DbType="NVarChar(106)" CanBeNull="true" />
+      <Column Name="InvestmentTypeDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemberFixedDepositInvestment_MemberDetailsAdded" Member="vwMemberFixedDepositInvestment_MemberDetailsAddeds">
+    <Type Name="vwMemberFixedDepositInvestment_MemberDetailsAdded">
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(301)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalContribution" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsMatured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InsterstRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DurationDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaturedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ContributionFreqAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InvestmentDuration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InterestTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalWithdrawal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MemberFirstName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MemberLastName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MemberPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MemberBranch" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(600)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OtherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="GroupDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupMemberCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwDepositesToday" Member="vwDepositesTodays">
+    <Type Name="vwDepositesToday">
+      <Column Name="ContributionAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="memberName" Type="System.String" DbType="NVarChar(352)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsGroup" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwWithdrawalsToday" Member="vwWithdrawalsTodays">
+    <Type Name="vwWithdrawalsToday">
+      <Column Name="memberName" Type="System.String" DbType="NVarChar(352)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsGroup" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="WithdrawalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WithdrawnBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WithdrawalIssuedByUserName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwLoansToday" Member="vwLoansTodays">
+    <Type Name="vwLoansToday">
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(352)" CanBeNull="true" />
+      <Column Name="CustomerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Principal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsGroup" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DefultersView" Member="DefultersViews">
+    <Type Name="DefultersView">
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(352)" CanBeNull="true" />
+      <Column Name="CustomerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Principal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsGroup" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalRepayment" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AuditTrail" Member="AuditTrails">
+    <Type Name="AuditTrail">
+      <Column Name="AuditTrailId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AffectedTable" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Action" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ActionDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MobileBankerCustomers" Member="MobileBankerCustomers">
+    <Type Name="MobileBankerCustomer">
+      <Column Name="MobileBankerCustomerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MobileBankerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Member_MobileBankerCustomer" Member="Member" ThisKey="MemberId" OtherKey="MemberId" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="LoanGroup_MobileBankerCustomer" Member="LoanGroup" ThisKey="GroupID" OtherKey="GroupId" Type="LoanGroup" IsForeignKey="true" />
+      <Association Name="MobileBanker_MobileBankerCustomer" Member="MobileBanker" ThisKey="MobileBankerID" OtherKey="MobileBankerid" Type="MobileBanker" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMobileBankers" Member="vwMobileBankers">
+    <Type Name="vwMobileBanker">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(302)" CanBeNull="true" />
+      <Column Name="MobileBankerCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MobileBankerid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AppliedInterest_Temp" Member="AppliedInterest_Temps">
+    <Type Name="AppliedInterest_Temp">
+      <Column Name="AppliedInterestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InterestAmount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contributions" Member="Contributions">
+    <Type Name="Contribution">
+      <Column Name="ContributionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvestmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContributionAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ContributionBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RecievedBy" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ContributionScheduleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContributionAmountInWords" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReceiptNumber" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="WasReceivedByMobileBanker" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MobileBankerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChequeNumber" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PaymentMethodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Investment_Contribution" Member="Investment" ThisKey="InvestmentId" OtherKey="InvestmentID" Type="Investment" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Repayments" Member="Repayments">
+    <Type Name="Repayment">
+      <Column Name="RepaymentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RepaymentAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RepaymentBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RepaymentScheduleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RepaidWithInvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReceiptNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RepaymentAmountInWords" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InterestPayment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PrincipalPayment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="isDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ChequeNumber" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PaymentMethodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Loan_Repayment" Member="Loan" ThisKey="LoanId" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MembersView2" Member="MembersView2s">
+    <Type Name="MembersView2">
+      <Column Name="Member" Type="System.String" DbType="NVarChar(354)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberWithdrawals" Member="MemberWithdrawals">
+    <Type Name="MemberWithdrawal">
+      <Column Name="MemberWithdrawalId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WithdrawalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WithdrawnBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WithdrawalIssuedByUserName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Narration" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Member_MemberWithdrawal" Member="Member" ThisKey="MemberId" OtherKey="MemberId" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Investment_MemberWithdrawal" Member="Investment" ThisKey="InvestmentID" OtherKey="InvestmentID" Type="Investment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Loans" Member="Loans">
+    <Type Name="Loan">
+      <Column Name="LoanID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InterestTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Principal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="payWithContribution" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RepaymentFrequencyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpectedRepaymentEndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ActualRepaymentEndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsPaidup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="RepaymentFreqAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DurationType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RawDurationEntered" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanCalculationStartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CollateralID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CollateralDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GuarantorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LoanTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LoanDurationTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Loan_LoanPenalty" Member="LoanPenalties" ThisKey="LoanID" OtherKey="LoanID" Type="LoanPenalty" />
+      <Association Name="Loan_Repayment" Member="Repayments" ThisKey="LoanID" OtherKey="LoanId" Type="Repayment" />
+      <Association Name="Loan_LoanCollateralDocument" Member="LoanCollateralDocuments" ThisKey="LoanID" OtherKey="LoanId" Type="LoanCollateralDocument" />
+      <Association Name="InterestRateType_Loan" Member="InterestRateType" ThisKey="InterestTypeId" OtherKey="InterestRateTypeId" Type="InterestRateType" IsForeignKey="true" />
+      <Association Name="RepaymentFrequency_Loan" Member="RepaymentFrequency" ThisKey="RepaymentFrequencyId" OtherKey="RepaymentFrequencyId" Type="RepaymentFrequency" IsForeignKey="true" />
+      <Association Name="Member_Loan" Member="Member" ThisKey="MemberId" OtherKey="MemberId" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyProfile" Member="CompanyProfiles">
+    <Type Name="CompanyProfile">
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="website" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="EndOfDayLastRunDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DefaultInterestRateTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SimpleInterestRate" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CompoundFrequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompoundInterestRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DefaultersInteresty" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ExcludeSundaysFromCalculations" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ExcludeSaturdayFromCalculations" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CompanyLogo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LogoFileExt" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="AutoGenerateAccountNumbers" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GracePeriodDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PenaltyCalculationFrequencyDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RMFICategory" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Members" Member="Members">
+    <Type Name="Member">
+      <Column Name="MemberId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberFirstName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MemberLastName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MemberPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MemberBranch" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurrentLoanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(600)" CanBeNull="true" />
+      <Column Name="ResidentialAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BusinessAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OtherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IdentityTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdentityNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Signature" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OccupationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContactPersonPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NextOfKin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NextOfKinTelephone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Member_RepaymentSchedule" Member="RepaymentSchedules" ThisKey="MemberId" OtherKey="MemberID" Type="RepaymentSchedule" />
+      <Association Name="Member_GroupMember" Member="GroupMembers" ThisKey="MemberId" OtherKey="MemberID" Type="GroupMember" />
+      <Association Name="Member_MemberDeposit" Member="MemberDeposits" ThisKey="MemberId" OtherKey="MemberId" Type="MemberDeposit" />
+      <Association Name="Member_MobileBankerCustomer" Member="MobileBankerCustomers" ThisKey="MemberId" OtherKey="MemberId" Type="MobileBankerCustomer" />
+      <Association Name="Member_MemberWithdrawal" Member="MemberWithdrawals" ThisKey="MemberId" OtherKey="MemberId" Type="MemberWithdrawal" />
+      <Association Name="Member_Loan" Member="Loans" ThisKey="MemberId" OtherKey="MemberId" Type="Loan" />
+      <Association Name="Member_Investment" Member="Investments" ThisKey="MemberId" OtherKey="MemberID" Type="Investment" />
+      <Association Name="AccountType_Member" Member="AccountType" ThisKey="AccountTypeID" OtherKey="AccountTypeId" Type="AccountType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountTypes" Member="AccountTypes">
+    <Type Name="AccountType">
+      <Column Name="AccountTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MinimumBalance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DefaultInvestmentTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastMemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="AccountType_Member" Member="Members" ThisKey="AccountTypeId" OtherKey="AccountTypeID" Type="Member" />
+      <Association Name="AccountType_LoanGroup" Member="LoanGroups" ThisKey="AccountTypeId" OtherKey="AccountTypeId" Type="LoanGroup" />
+      <Association Name="AccountType_AccountTypeFeature" Member="AccountTypeFeatures" ThisKey="AccountTypeId" OtherKey="AccountTypeID" Type="AccountTypeFeature" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Branches" Member="Branches">
+    <Type Name="Branch">
+      <Column Name="BranchID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BranchName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BranchCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanGroups" Member="LoanGroups">
+    <Type Name="LoanGroup">
+      <Column Name="GroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AccountTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BranchID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LoanGroup_GroupMember" Member="GroupMembers" ThisKey="GroupId" OtherKey="GroupID" Type="GroupMember" />
+      <Association Name="LoanGroup_MobileBankerCustomer" Member="MobileBankerCustomers" ThisKey="GroupId" OtherKey="GroupID" Type="MobileBankerCustomer" />
+      <Association Name="LoanGroup_Investment" Member="Investments" ThisKey="GroupId" OtherKey="GroupId" Type="Investment" />
+      <Association Name="AccountType_LoanGroup" Member="AccountType" ThisKey="AccountTypeId" OtherKey="AccountTypeId" Type="AccountType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountFeatureFreqOfCalculation" Member="AccountFeatureFreqOfCalculations">
+    <Type Name="AccountFeatureFreqOfCalculation">
+      <Column Name="AccountFeatureFreqOfCalculationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountTypeFeaturesCalculateOn" Member="AccountTypeFeaturesCalculateOns">
+    <Type Name="AccountTypeFeaturesCalculateOn">
+      <Column Name="AccountTypeFeaturesCalculateOnID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="AccountTypeFeaturesCalculateOn_AccountTypeFeature" Member="AccountTypeFeatures" ThisKey="AccountTypeFeaturesCalculateOnID" OtherKey="CalculateOn" Type="AccountTypeFeature" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FailMessages" Member="FailMessages">
+    <Type Name="FailMessage">
+      <Column Name="Message" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Actioin" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AppliedAccountTypeFeatureHistoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FailMessageId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AppliedFeatureHistory_FailMessage" Member="AppliedFeatureHistory" ThisKey="AppliedAccountTypeFeatureHistoryID" OtherKey="AppliedFeatureHistoryId" Type="AppliedFeatureHistory" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MobileBankers" Member="MobileBankers">
+    <Type Name="MobileBanker">
+      <Column Name="MobileBankerid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OtherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MobileBankerCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MobileBanker_MobileBankerCustomer" Member="MobileBankerCustomers" ThisKey="MobileBankerid" OtherKey="MobileBankerID" Type="MobileBankerCustomer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanCollateralDocument" Member="LoanCollateralDocuments">
+    <Type Name="LoanCollateralDocument">
+      <Column Name="LoanCollateralDocumentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DocumentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DocumentContent" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FileExtension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Loan_LoanCollateralDocument" Member="Loan" ThisKey="LoanId" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Investments" Member="Investments">
+    <Type Name="Investment">
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InsterstRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContributionFrequencyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InterestTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ContributionFreqAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="InvestmentCalculationStartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsMatured" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DurationTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaturedAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="InvestmentTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ParentInvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvestmentDescriptionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InterestDurationTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Investment_ContributionSchedule" Member="ContributionSchedules" ThisKey="InvestmentID" OtherKey="InvestmentId" Type="ContributionSchedule" />
+      <Association Name="Investment_Contribution" Member="Contributions" ThisKey="InvestmentID" OtherKey="InvestmentId" Type="Contribution" />
+      <Association Name="Investment_MemberWithdrawal" Member="MemberWithdrawals" ThisKey="InvestmentID" OtherKey="InvestmentID" Type="MemberWithdrawal" />
+      <Association Name="Investment_AppliedInterest" Member="AppliedInterests" ThisKey="InvestmentID" OtherKey="InvestmentID" Type="AppliedInterest" />
+      <Association Name="Investment_AppliedDeduction" Member="AppliedDeductions" ThisKey="InvestmentID" OtherKey="InvestmentID" Type="AppliedDeduction" />
+      <Association Name="InterestRateType_Investment" Member="InterestRateType" ThisKey="InterestTypeId" OtherKey="InterestRateTypeId" Type="InterestRateType" IsForeignKey="true" />
+      <Association Name="LoanGroup_Investment" Member="LoanGroup" ThisKey="GroupId" OtherKey="GroupId" Type="LoanGroup" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Member_Investment" Member="Member" ThisKey="MemberID" OtherKey="MemberId" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountTypeFeatures" Member="AccountTypeFeatures">
+    <Type Name="AccountTypeFeature">
+      <Column Name="AccountFeatureID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeduction" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsPercentage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CalculateOn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValueToApply" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CalculationFrequencyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthlyCalculationDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnnualCalculationMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnnualCalculationDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HasCustomCalculationFrequency" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CustomCalculationFreqNumberOfDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RunByEndOfFay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FeatureDescription" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="AccountTypeFeature_AppliedAccountFeature" Member="AppliedAccountFeatures" ThisKey="AccountFeatureID" OtherKey="AccountTypeFeatureID" Type="AppliedAccountFeature" />
+      <Association Name="AccountTypeFeature_AppliedFeatureHistory" Member="AppliedFeatureHistories" ThisKey="AccountFeatureID" OtherKey="AccountTypeFeatureID" Type="AppliedFeatureHistory" />
+      <Association Name="AccountTypeFeaturesCalculateOn_AccountTypeFeature" Member="AccountTypeFeaturesCalculateOn" ThisKey="CalculateOn" OtherKey="AccountTypeFeaturesCalculateOnID" Type="AccountTypeFeaturesCalculateOn" IsForeignKey="true" />
+      <Association Name="AccountType_AccountTypeFeature" Member="AccountType" ThisKey="AccountTypeID" OtherKey="AccountTypeId" Type="AccountType" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AppliedAccountFeatures" Member="AppliedAccountFeatures">
+    <Type Name="AppliedAccountFeature">
+      <Column Name="AppliedAccountFeaturesID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AppliedValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AccountTypeFeatureID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Narration" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AppliedFeatureHistoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="AccountTypeFeature_AppliedAccountFeature" Member="AccountTypeFeature" ThisKey="AccountTypeFeatureID" OtherKey="AccountFeatureID" Type="AccountTypeFeature" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="AppliedFeatureHistory_AppliedAccountFeature" Member="AppliedFeatureHistory" ThisKey="AppliedFeatureHistoryId" OtherKey="AppliedFeatureHistoryId" Type="AppliedFeatureHistory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMembersWithInvestments" Member="vwMembersWithInvestments">
+    <Type Name="vwMembersWithInvestment">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(352)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MemberId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AccountTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvestmentAmount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TotalInterestApplied" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="InvestmentTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AppliedFeatureHistory" Member="AppliedFeatureHistories">
+    <Type Name="AppliedFeatureHistory">
+      <Column Name="AppliedFeatureHistoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountTypeFeatureID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AppliedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AppliedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ActionInitiatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AppliedForDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="AppliedFeatureHistory_FailMessage" Member="FailMessages" ThisKey="AppliedFeatureHistoryId" OtherKey="AppliedAccountTypeFeatureHistoryID" Type="FailMessage" />
+      <Association Name="AppliedFeatureHistory_AppliedAccountFeature" Member="AppliedAccountFeatures" ThisKey="AppliedFeatureHistoryId" OtherKey="AppliedFeatureHistoryId" Type="AppliedAccountFeature" />
+      <Association Name="AppliedFeatureHistory_AppliedInterest" Member="AppliedInterests" ThisKey="AppliedFeatureHistoryId" OtherKey="AppliedFeatureHistoryId" Type="AppliedInterest" />
+      <Association Name="AppliedFeatureHistory_AppliedDeduction" Member="AppliedDeductions" ThisKey="AppliedFeatureHistoryId" OtherKey="AppliedFeatureHistoryId" Type="AppliedDeduction" />
+      <Association Name="AccountTypeFeature_AppliedFeatureHistory" Member="AccountTypeFeature" ThisKey="AccountTypeFeatureID" OtherKey="AccountFeatureID" Type="AccountTypeFeature" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AppliedInterest" Member="AppliedInterests">
+    <Type Name="AppliedInterest">
+      <Column Name="AppliedInterestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InterestAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AppliedFeatureHistoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AppliedFor" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Narration" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="AppliedFeatureHistory_AppliedInterest" Member="AppliedFeatureHistory" ThisKey="AppliedFeatureHistoryId" OtherKey="AppliedFeatureHistoryId" Type="AppliedFeatureHistory" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Investment_AppliedInterest" Member="Investment" ThisKey="InvestmentID" OtherKey="InvestmentID" Type="Investment" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AppliedDeduction" Member="AppliedDeductions">
+    <Type Name="AppliedDeduction">
+      <Column Name="AppliedDeductionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvestmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeductionAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AppliedFeatureHistoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AppliedFor" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Narration" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="AppliedFeatureHistory_AppliedDeduction" Member="AppliedFeatureHistory" ThisKey="AppliedFeatureHistoryId" OtherKey="AppliedFeatureHistoryId" Type="AppliedFeatureHistory" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Investment_AppliedDeduction" Member="Investment" ThisKey="InvestmentID" OtherKey="InvestmentID" Type="Investment" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetTotalLoanRepayment" Method="GetTotalLoanRepayment" IsComposable="true">
+    <Parameter Name="LoanID" Parameter="loanID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Decimal" />
+  </Function>
+</Database>

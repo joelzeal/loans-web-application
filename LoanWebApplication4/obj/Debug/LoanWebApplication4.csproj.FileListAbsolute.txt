@@ -1,0 +1,293 @@
+c:\users\joel\documents\visual studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+c:\users\joel\documents\visual studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+c:\users\joel\documents\visual studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+c:\users\joel\documents\visual studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+c:\users\joel\documents\visual studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Users\SISCO\Downloads\tow\the_final_loan_app\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Users\SISCO\Downloads\tow\the_final_loan_app\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Users\SISCO\Downloads\tow\the_final_loan_app\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\SISCO\Downloads\tow\the_final_loan_app\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Users\SISCO\Downloads\tow\the_final_loan_app\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Users\SISCO\Downloads\tow\the_final_loan_app\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Users\SISCO\Downloads\tow\the_final_loan_app\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Joel\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Joel\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Joel\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Joel\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Joel\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Joel\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Joel\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Windows\Branding\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Windows\Branding\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Windows\Branding\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Windows\Branding\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Windows\Branding\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Windows\Branding\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Windows\Branding\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\FINANCEMANAGER.sdf
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\Reports\ContributionSchedule.rdlc
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanRepaymentReceipt.rdlc
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule_Group.rdlc
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule.rdlc
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfile.rdlc
+C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfileSimple.rdlc
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\FINANCEMANAGER.sdf
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\Reports\ContributionSchedule.rdlc
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanRepaymentReceipt.rdlc
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule_Group.rdlc
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule.rdlc
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfile.rdlc
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfileSimple.rdlc
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\ajaxcontroltoolkit.pdb
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\ar\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\cs\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\de\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\es\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\fr\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\he\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\hi\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\it\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\ja\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\ko\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\nl\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\pt\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\ru\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\tr-TR\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\zh-CHS\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\bin\zh-CHT\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Users\SISCO\Desktop\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\FINANCEMANAGER.sdf
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\Reports\ContributionSchedule.rdlc
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanRepaymentReceipt.rdlc
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule_Group.rdlc
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule.rdlc
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfile.rdlc
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfileSimple.rdlc
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\ajaxcontroltoolkit.pdb
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\ar\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\cs\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\de\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\es\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\fr\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\he\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\hi\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\it\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\ja\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\ko\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\nl\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\pt\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\ru\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\tr-TR\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\zh-CHS\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\bin\zh-CHT\ajaxcontroltoolkit.resources.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Users\SISCO\Desktop\NewPublished\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\App_Data\FinanceManager.mdf
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\App_Data\FinanceManager_log.ldf
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\FINANCEMANAGER.sdf
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfileSimple_BoG.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\ContributionSchedule.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\SUSUContributionReceipt_Group.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\SUSUContributionReceipt.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\ContributionReceipt_Group.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\ContributionReceipt.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptFixedDepositInvestment.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanRepaymentReceipt_Group.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanRepaymentReceipt.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule_Group.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\LoanSchedule.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfile.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Reports\rptCompanyProfileSimple.rdlc
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.pdb
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\System.Data.DataSetExtensions.dll
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\System.Data.Linq.dll
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.AccessDenied.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationPartDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationPartList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationPartMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ApplicationPartNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARTree.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.AuditLogList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.CatalogMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.CatalogOverview.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.DateTimeDialog.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.pdefault.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.Default2.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.DelegatedAdmins.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.DelegatedUsers.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.GroupDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.GroupList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.GroupMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.GroupNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.Header.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.Help.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.HelpContentFrameset.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.HelpHeader.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.InFrame.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.LogonForm.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.MembershipMemberOf.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.MembershipMembers.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARTreeControl.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARTreeOU.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationPartDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationPartList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationPartMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIApplicationPartNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIAuditLogList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUICatalogMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUICatalogOverview.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIDelegatedAdmins.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIDelegatedUsers.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIGroupDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIGroupList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIGroupMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIGroupNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIHelpIcon.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIMembershipMemberOf.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIMembershipMembers.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIMembershipOwners.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIMenuControl.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIMyAdministration.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIMySettings.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIObjectDetailsValidity.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIObjectListbox.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIObjectProperty.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIObjectSelector.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOrgUnitDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOrgUnitList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOrgUnitMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOrgUnitNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOwnerDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOwnerDropDownList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOwnerList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOwnerMemberDetails.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOwnerMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIOwnerNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPageControl.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPageModal.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPermissionDetails.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPermissionMatrix.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPermissionTypeDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPermissionTypeList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPermissionTypeMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIPermissionTypeNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIProperties.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIRegistrationForm.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIRelationshipValidity.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIRoleDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIRoleList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIRoleMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIRoleNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISaveScroll.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISchemaProperties.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISchemaPropertyDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISchemaPropertyDetailsMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISchemaPropertyNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISendPassword.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISetPassword.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUISignOut.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsAccount.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsAddress.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsCustomFields.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsNotes.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsOrganization.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsPassword.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDetailsPhones.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserDropDownList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ARUIUserSelection.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.MyAdministration.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.MySettings.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ObjectDetailsValidity.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ObjectProperty.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ObjectSelector.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ObjectSelectorObjectList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.ObjectSelectorObjectTree.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OrgUnitDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OrgUnitList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OrgUnitMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OrgUnitNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OwnerDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OwnerList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OwnerMemberDetails.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OwnerMembers.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OwnerMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.OwnerNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.PermissionDetails.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.PermissionMatrix.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.PermissionTypeDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.PermissionTypeList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.PermissionTypeMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.PermissionTypeNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.RelationshipValidity.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.RoleDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.RoleList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.RoleMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.RoleNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.SchemaAbout.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.SchemaList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.SchemaPropertyDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.SchemaPropertyDetailsMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.SchemaPropertyNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.UserManagement.strings.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsAccount.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsAddress.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsCustomFields.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsGeneral.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsNotes.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsOrganization.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsPassword.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsPhones.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserDetailsSettings.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserList.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserMenu.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\SecureAccess.SecureAccess.UserNew.resources
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.cache
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\RdlCompile.compiled
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.dll
+C:\Users\ZeaL\Documents\Visual Studio 2010\Projects\LoanWebApplication4\LoanWebApplication4\obj\Debug\LoanWebApplication4.pdb

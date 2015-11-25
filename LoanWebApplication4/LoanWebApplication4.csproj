@@ -1,0 +1,3487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A80E7CE5-C688-46E9-B9B4-B8AA1CC09DD3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoanWebApplication4</RootNamespace>
+    <AssemblyName>LoanWebApplication4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="ApplicationServices-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=.\SQLExpress%3bAttachDbFilename=|DataDirectory|\ASPNETDB.MDF%3bIntegrated Security=True%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Debug\AutoScripts\ApplicationServices-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="FinanceManagerConnectionString-Deployment" Order="2">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=.\SQLEXPRESS%3bAttachDbFilename=|DataDirectory|\FinanceManager.mdf%3bIntegrated Security=True%3bConnect Timeout=30%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Debug\AutoScripts\FinanceManagerConnectionString-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LoanWebApplication4.Properties.Settings.ClientFINANCEMANAGERConnectionString-Deployment" Order="3">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\FINANCEMANAGER.sdf%3bMax Database Size=2047" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Debug\AutoScripts\LoanWebApplication4.Properties.Settings.ClientFINANCEMANAGERConnectionString-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="FinanceManagerConnectionString1-Deployment" Order="4">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=.\SQLExpress%3bAttachDbFilename=|DataDirectory|\FinanceManager.mdf%3bIntegrated Security=True%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Debug\AutoScripts\FinanceManagerConnectionString1-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ajaxcontroltoolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ARCatalogs, Version=4.3.3012.0, Culture=neutral, PublicKeyToken=f654f6546127ecbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ARCatalogs.dll</HintPath>
+    </Reference>
+    <Reference Include="ARDataServices, Version=4.3.3012.0, Culture=neutral, PublicKeyToken=f654f6546127ecbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ARDataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="ARIISManager, Version=4.3.3012.0, Culture=neutral, PublicKeyToken=f654f6546127ecbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ARIISManager.dll</HintPath>
+    </Reference>
+    <Reference Include="ARImportEventHandlers, Version=4.3.3012.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ARImportEventHandlers.dll</HintPath>
+    </Reference>
+    <Reference Include="ARObjects, Version=4.3.3012.0, Culture=neutral, PublicKeyToken=f654f6546127ecbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ARObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="ARPresentationLayer, Version=4.3.3012.0, Culture=neutral, PublicKeyToken=f654f6546127ecbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ARPresentationLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="ARWebSecurity, Version=4.3.3012.0, Culture=neutral, PublicKeyToken=f654f6546127ecbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ARWebSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Synchronization, Version=1.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.Server, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.SqlServerCe, Version=2.0.0.0" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SecureAccess, Version=4.3.3012.0, Culture=neutral, PublicKeyToken=f654f6546127ecbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SecureAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="admin\AccessDenied.aspx" />
+    <Content Include="admin\AccountTypeFeatures.aspx" />
+    <Content Include="admin\AccountTypeFeatureEdit.aspx" />
+    <Content Include="admin\AppliedFeaturesComplete.aspx" />
+    <Content Include="admin\ApplyInsterest.aspx" />
+    <Content Include="admin\Backup\databaseBackup.aspx" />
+    <Content Include="admin\BoG\MF7C.aspx" />
+    <Content Include="admin\CompanyProfile.aspx" />
+    <Content Include="admin\Collaterals.aspx" />
+    <Content Include="admin\ConfirmCancelPayment.aspx" />
+    <Content Include="admin\ContributionsReport.aspx" />
+    <Content Include="admin\ContributionReceipt.aspx" />
+    <Content Include="admin\ContributionReceipt_Group.aspx" />
+    <Content Include="admin\AccountTypesSetup.aspx" />
+    <Content Include="admin\ContributionsReportForMobileBanker.aspx" />
+    <Content Include="admin\AppliedInterestForPrintReport.aspx" />
+    <Content Include="admin\CashCollectionReportReport.aspx" />
+    <Content Include="admin\Branches.aspx" />
+    <Content Include="admin\ApplyAccountTypeFeatures.aspx" />
+    <Content Include="admin\AppliedAccountTypeFeaturesReport.aspx" />
+    <Content Include="admin\TotalAppliedInterestAndDeductionsReport.aspx" />
+    <Content Include="admin\Fix\ApplyFeaturesWithinRange.aspx" />
+    <Content Include="admin\Fix\Default.aspx" />
+    <Content Include="admin\Fix\default_31_jan_2014.aspx" />
+    <Content Include="admin\LoanStatement_Real_Group.aspx" />
+    <Content Include="admin\CustomerStatementReport_Investment_New_Type2.aspx" />
+    <Content Include="admin\CustomerStatementReport_Investment_MemberPreselected.aspx" />
+    <Content Include="admin\CustomerStatementReport_Investment_New.aspx" />
+    <Content Include="admin\TotalCashReceivedReport.aspx" />
+    <Content Include="admin\TotalCashDisbursedReport.aspx" />
+    <Content Include="admin\TransferMoney.aspx" />
+    <Content Include="admin\trialExpiration.aspx" />
+    <Content Include="admin\UserManagementHome.aspx" />
+    <Content Include="admin\WithdrawalsReportForMobileBanker.aspx" />
+    <Content Include="admin\InvestmentStatement_Real_Group.aspx" />
+    <Content Include="admin\MobileBankerDetails.aspx" />
+    <Content Include="admin\MobileBankersList.aspx" />
+    <Content Include="admin\InvestmentsReport_regular.aspx" />
+    <Content Include="admin\InvestmentTypesSetup.aspx" />
+    <Content Include="admin\LoanTypesSetup.aspx" />
+    <Content Include="admin\OccupationsSetup.aspx" />
+    <Content Include="admin\NewLoan_MemberPreSelected.aspx" />
+    <Content Include="admin\NewInvestment_FixedDeposit_MemberPreSelected.aspx" />
+    <Content Include="admin\NewSusuInvestment_MemberPreselected.aspx" />
+    <Content Include="admin\NewInvestment_MemberPreSelected.aspx" />
+    <Content Include="admin\NewEmployeeLoan.aspx" />
+    <Content Include="admin\FixedDepositInvestmentWithdrawal_Group.aspx" />
+    <Content Include="admin\RecordMobileBankerCashCollection.aspx" />
+    <Content Include="admin\SUSUContributionReceipt_Group.aspx" />
+    <Content Include="admin\RollOverInvestment.aspx" />
+    <Content Include="admin\LoansRepaymentReport.aspx" />
+    <Content Include="admin\SUSUContributionReceipt.aspx" />
+    <Content Include="admin\SUSUInvestmentStatement.aspx" />
+    <Content Include="admin\FixedDepositInvestmentWithdrawal.aspx" />
+    <Content Include="admin\FixedDepositInvestmentStatement.aspx" />
+    <Content Include="admin\NewInvestment_FixedDeposit.aspx" />
+    <Content Include="admin\CustomerStatementReport_Investment.aspx" />
+    <Content Include="admin\CustomerStatementReport_Loan.aspx" />
+    <Content Include="admin\LoanRepaymentWithInvestment_Group.aspx" />
+    <Content Include="admin\LoanRepaymentWithInvestment.aspx" />
+    <Content Include="admin\MaturedInvestmentsReport.aspx" />
+    <Content Include="admin\RepaymentReceipt_Group.aspx" />
+    <Content Include="admin\CustomerStatementReport.aspx" />
+    <Content Include="admin\OverdueLoansReport.aspx" />
+    <Content Include="admin\WebForm2.aspx" />
+    <Content Include="admin\WithdrawalsReport.aspx" />
+    <Content Include="admin\InvestmentsReport.aspx" />
+    <Content Include="admin\LoansDisbursedReport.aspx" />
+    <Content Include="admin\GroupsSUSUInvestmentContribution.aspx" />
+    <Content Include="admin\GroupSUSUInvestmentWithdrawal.aspx" />
+    <Content Include="admin\GroupInvestmentWithdrawal.aspx" />
+    <Content Include="admin\GroupInvestmentContribution.aspx" />
+    <Content Include="admin\GroupInvestmentStatement.aspx" />
+    <Content Include="admin\GroupInvestments.aspx" />
+    <Content Include="admin\SUSUInvestmentWithdrawal.aspx" />
+    <Content Include="admin\SUSUInvestmentContribution.aspx" />
+    <Content Include="admin\NewSusuInvestment.aspx" />
+    <Content Include="admin\LoanStatement_Real.aspx" />
+    <Content Include="admin\InvestmentStatement_Real.aspx" />
+    <Content Include="admin\MemberInvestments.aspx" />
+    <Content Include="admin\InvestmentStatement.aspx" />
+    <Content Include="admin\Groups.aspx" />
+    <Content Include="admin\InvestmentDurations.aspx" />
+    <Content Include="admin\InvestmentWithdrawal.aspx" />
+    <Content Include="admin\InvestmentContribution.aspx" />
+    <Content Include="admin\LoanRepayment_old.aspx" />
+    <Content Include="admin\NewInvestment.aspx" />
+    <Content Include="admin\GroupLoanRepayment.aspx" />
+    <Content Include="admin\GroupLoansLoans.aspx" />
+    <Content Include="admin\LoanStatement_Group.aspx" />
+    <Content Include="admin\MemberGroupDetails.aspx" />
+    <Content Include="admin\GuarantorDetails.aspx" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\Deposit.aspx" />
+    <Content Include="admin\LoanDurations.aspx" />
+    <Content Include="admin\LoanRepayment.aspx" />
+    <Content Include="admin\LoanSsttings.aspx" />
+    <Content Include="admin\LoanStatement.aspx" />
+    <Content Include="admin\MemberLoans.aspx" />
+    <Content Include="admin\MemberStatement.aspx" />
+    <Content Include="admin\NewLoan.aspx" />
+    <Content Include="admin\RepaymentFrequency.aspx" />
+    <Content Include="admin\RepaymentReceipt.aspx" />
+    <Content Include="admin\RepaymentReceipt2.aspx" />
+    <Content Include="admin\RunEndOfDay.aspx" />
+    <Content Include="admin\SearchPage.aspx" />
+    <Content Include="admin\UserManagement.aspx" />
+    <Content Include="admin\userManagement2.aspx" />
+    <Content Include="admin\WebForm1.aspx" />
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\ASPNETDB_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
+    <Content Include="App_Data\FinanceManager.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\FinanceManager_log.ldf">
+      <DependentUpon>FinanceManager.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\ARCatalogs.dll" />
+    <Content Include="bin\ARDataServices.dll" />
+    <Content Include="bin\ARIISManager.dll" />
+    <Content Include="bin\ARImportEventHandlers.dll" />
+    <Content Include="bin\ARObjects.dll" />
+    <Content Include="bin\ARPresentationLayer.dll" />
+    <Content Include="bin\ARWebSecurity.dll" />
+    <Content Include="bin\SecureAccess.dll" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="images\download.png" />
+    <Content Include="images\Bank_account.png" />
+    <Content Include="images\newFeature.png" />
+    <Content Include="images\printSchedule.png" />
+    <Content Include="Setups\AccessDenied.aspx" />
+    <Content Include="UserControls\MemberToolBarWebUserControl_Investment.ascx" />
+    <Content Include="UserManagement\AccessDenied.aspx" />
+    <Content Include="UserManagement\ApplicationDetailsGeneral.aspx" />
+    <Content Include="UserManagement\ApplicationList.aspx" />
+    <Content Include="UserManagement\ApplicationMenu.aspx" />
+    <Content Include="UserManagement\ApplicationNew.aspx" />
+    <Content Include="UserManagement\ApplicationPartDetailsGeneral.aspx" />
+    <Content Include="UserManagement\ApplicationPartList.aspx" />
+    <Content Include="UserManagement\ApplicationPartMenu.aspx" />
+    <Content Include="UserManagement\ApplicationPartNew.aspx" />
+    <Content Include="UserManagement\ARTree.aspx" />
+    <Content Include="UserManagement\AuditLogList.aspx" />
+    <Content Include="UserManagement\Blank.html" />
+    <Content Include="UserManagement\CatalogMenu.aspx" />
+    <Content Include="UserManagement\CatalogOverview.aspx" />
+    <Content Include="UserManagement\DateTimeDialog.aspx" />
+    <Content Include="UserManagement\Default.aspx" />
+    <Content Include="UserManagement\Default2.aspx" />
+    <Content Include="UserManagement\Defaultx.aspx" />
+    <Content Include="UserManagement\DelegatedAdmins.aspx" />
+    <Content Include="UserManagement\DelegatedUsers.aspx" />
+    <Content Include="UserManagement\EffectivePermissions.aspx" />
+    <Content Include="UserManagement\EffectiveRoles.aspx" />
+    <Content Include="UserManagement\Functions\ARTreeControl.js" />
+    <Content Include="UserManagement\Functions\ARUIOpenWin.js" />
+    <Content Include="UserManagement\Functions\ARUITree.css" />
+    <Content Include="UserManagement\Functions\ARUITree.js" />
+    <Content Include="UserManagement\Functions\functions.js" />
+    <Content Include="UserManagement\Functions\Tooltip.js" />
+    <Content Include="UserManagement\GroupDetailsGeneral.aspx" />
+    <Content Include="UserManagement\GroupList.aspx" />
+    <Content Include="UserManagement\GroupMenu.aspx" />
+    <Content Include="UserManagement\GroupNew.aspx" />
+    <Content Include="UserManagement\Header.aspx" />
+    <Content Include="UserManagement\Help.aspx" />
+    <Content Include="UserManagement\HelpContentFrameset.aspx" />
+    <Content Include="UserManagement\HelpFiles\About.html" />
+    <Content Include="UserManagement\HelpFiles\Adding a List of Users to Your Page.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix A - ASP.NET User Controls Reference.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix B - Web.config Parameters.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix C - Special Items in the Database.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix D - Import.exe Configuration.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix E - Using X.509 Certificates.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix F - Included Testing X.509 Certificates.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix G - ARWebService Related Exceptions.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix H - WinForms Controls Reference.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix I - Recommendations for Large Databases.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix J - Enforcing Referential Integrity Between Tables.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix K - WCF Service Related Exceptions.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix L - IIS 7 Installation steps.html" />
+    <Content Include="UserManagement\HelpFiles\Appendix M - SharePoint 2007 Installation steps.html" />
+    <Content Include="UserManagement\HelpFiles\Application and Session Variables Used in User Controls.html" />
+    <Content Include="UserManagement\HelpFiles\ARUILogonForm - Logon Form Control.html" />
+    <Content Include="UserManagement\HelpFiles\ARUIMembership - Members Management.html" />
+    <Content Include="UserManagement\HelpFiles\ARUIMyAdministration - Delegated Administration.html" />
+    <Content Include="UserManagement\HelpFiles\ARUIPermissionMatrix - Delegated Permission Management.html" />
+    <Content Include="UserManagement\HelpFiles\ARUIRegistrationForm - Registration Form.html" />
+    <Content Include="UserManagement\HelpFiles\ARUISendPassword - Send Password Control.html" />
+    <Content Include="UserManagement\HelpFiles\ARUISetPassword - Set Password Control.html" />
+    <Content Include="UserManagement\HelpFiles\ARUISignOut - Sign Out Button.html" />
+    <Content Include="UserManagement\HelpFiles\ARUIUserDropDownList - User Drop-Down List.html" />
+    <Content Include="UserManagement\HelpFiles\ARUIUserList - Viewing List of Users.html" />
+    <Content Include="UserManagement\HelpFiles\ARUIUserSelection - User Selection Control.html" />
+    <Content Include="UserManagement\HelpFiles\ARWSLogonCtrl - Logon Form Control.html" />
+    <Content Include="UserManagement\HelpFiles\ARWSSetPasswordCtrl - Set Password Control.html" />
+    <Content Include="UserManagement\HelpFiles\ASP.NET Web Site Administration Tool.html" />
+    <Content Include="UserManagement\HelpFiles\Auditing User Activities in Your WinForms Applications.html" />
+    <Content Include="UserManagement\HelpFiles\Auditing User Activities.html" />
+    <Content Include="UserManagement\HelpFiles\Auditing.html" />
+    <Content Include="UserManagement\HelpFiles\Authentication and Authorization in WinForms Applications - a Step-by-Step Guide.html" />
+    <Content Include="UserManagement\HelpFiles\Authentication for selected area.html" />
+    <Content Include="UserManagement\HelpFiles\Authentication in Web Applications.html" />
+    <Content Include="UserManagement\HelpFiles\Authorization.html" />
+    <Content Include="UserManagement\HelpFiles\Checking User%27s Membership.html" />
+    <Content Include="UserManagement\HelpFiles\Common Error Messages.html" />
+    <Content Include="UserManagement\HelpFiles\Configuring ARWebService for X.509 Certificates.html" />
+    <Content Include="UserManagement\HelpFiles\Configuring ARWebsService for Symmetric Cryptography.html" />
+    <Content Include="UserManagement\HelpFiles\Configuring Windows Authentication Using the Application Configuration Wizard.html" />
+    <Content Include="UserManagement\HelpFiles\Configuring Your Application Manually %28Windows Authentication%29.html" />
+    <Content Include="UserManagement\HelpFiles\Configuring Your Application Manually.html" />
+    <Content Include="UserManagement\HelpFiles\Configuring Your Application Using the Application Configuration Wizard.html" />
+    <Content Include="UserManagement\HelpFiles\Controlling Access to Web Content.html" />
+    <Content Include="UserManagement\HelpFiles\Cover.html" />
+    <Content Include="UserManagement\HelpFiles\Creating a New User Catalog.html" />
+    <Content Include="UserManagement\HelpFiles\Developing Your Own Decryption Key Provider.html" />
+    <Content Include="UserManagement\HelpFiles\Documentation.css" />
+    <Content Include="UserManagement\HelpFiles\Export Service Certificate to the Client.html" />
+    <Content Include="UserManagement\HelpFiles\Feature Comparison.html" />
+    <Content Include="UserManagement\HelpFiles\Full Version Registration.html" />
+    <Content Include="UserManagement\HelpFiles\Generate Client Certificate Using Your Own Certificate Service.html" />
+    <Content Include="UserManagement\HelpFiles\Generate Service Certificate Using Your Own Certificate Service.html" />
+    <Content Include="UserManagement\HelpFiles\glossary.html" />
+    <Content Include="UserManagement\HelpFiles\htmltoc.html" />
+    <Content Include="UserManagement\HelpFiles\icons\blank1818.gif" />
+    <Content Include="UserManagement\HelpFiles\icons\li.gif" />
+    <Content Include="UserManagement\HelpFiles\icons\minus.gif" />
+    <Content Include="UserManagement\HelpFiles\icons\plus.gif" />
+    <Content Include="UserManagement\HelpFiles\icons\ul.gif" />
+    <Content Include="UserManagement\HelpFiles\icons\ul_open.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_4.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_5.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_5_windows.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_6.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_7_Logon.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AppConfigWizard_7_winnt.gif" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image002.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image003.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image004.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image005.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image006.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image007.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image008.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image009.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\appM_image010.jpg" />
+    <Content Include="UserManagement\HelpFiles\images\AppSettings_ProtectedArea.PNG" />
+    <Content Include="UserManagement\HelpFiles\images\AppSettings_ProtectedAreaPermTypes.PNG" />
+    <Content Include="UserManagement\HelpFiles\images\ARObjects_UML.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARObjects_UML_Schema.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUILogonForm.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIMembership.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIMyAdministration.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIPermissionMatrix.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIRegistrationForm.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUISendPassword.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUISetPassword.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIUserDropDownList.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIUserList.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIUserSelection_listbox_singlemode.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIUserSelection_MultiMode.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIUserSelection_orgchart.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARUIUserSelection_SingleMode.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARWCFService_asmxPage.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\ARWCFService_Deployment.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARWebService_Architecture.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARWebService_asmxPage.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARWebService_Deployment.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARWSLogonCtrl.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ARWSSetPasswordCtrl.gif" />
+    <Content Include="UserManagement\HelpFiles\images\authentication.gif" />
+    <Content Include="UserManagement\HelpFiles\images\authorization_content.gif" />
+    <Content Include="UserManagement\HelpFiles\images\Authorization_Permissions.gif" />
+    <Content Include="UserManagement\HelpFiles\images\authorization_roles.gif" />
+    <Content Include="UserManagement\HelpFiles\images\AWWCFclientconfig.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\bground_MenuTreeGradient.gif" />
+    <Content Include="UserManagement\HelpFiles\images\blank.png" />
+    <Content Include="UserManagement\HelpFiles\images\catman_main.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_newcat_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_newcat_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_newcat_3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_newcat_4.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_newcat_5.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_newcat_6.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_newcat_7.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_owner.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\catman_productregistration.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_properties.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_registerexisting.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_windowsnt_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_windowsnt_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_windowsnt_3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_windowsnt_4.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_windowsnt_5.gif" />
+    <Content Include="UserManagement\HelpFiles\images\catman_windowsnt_6.gif" />
+    <Content Include="UserManagement\HelpFiles\images\caution.gif" />
+    <Content Include="UserManagement\HelpFiles\images\caution.png" />
+    <Content Include="UserManagement\HelpFiles\images\caution.tif" />
+    <Content Include="UserManagement\HelpFiles\images\ComponentArchitecture.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPorts.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_LDAP1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_LDAP2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_LDAP3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_LDAP5.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_LDAP8.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_ODBC1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_ODBC2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_ODBC3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_ODBC4.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_ODBC5.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_ODBC8.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_WinNT1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_WinNT2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_WinNT3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_WinNT4.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_WinNT5.gif" />
+    <Content Include="UserManagement\HelpFiles\images\DirectoryPort_WinNT8.gif" />
+    <Content Include="UserManagement\HelpFiles\images\Directory_LDAP3.png" />
+    <Content Include="UserManagement\HelpFiles\images\draft.png" />
+    <Content Include="UserManagement\HelpFiles\images\guide_contentbased_iis5_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\guide_contentbased_iis5_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\guide_contentbased_iis5_3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\guide_contentbased_iis6_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\guide_contentbased_iis6_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\guide_resourcebased_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\guide_rolebased_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\IIS_Advanced.gif" />
+    <Content Include="UserManagement\HelpFiles\images\important.gif" />
+    <Content Include="UserManagement\HelpFiles\images\important.png" />
+    <Content Include="UserManagement\HelpFiles\images\important.tif" />
+    <Content Include="UserManagement\HelpFiles\images\index.gif" />
+    <Content Include="UserManagement\HelpFiles\images\index_sel.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ListUsers.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\ListUsers.png" />
+    <Content Include="UserManagement\HelpFiles\images\livesessionhttphandler.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\livesessionhttpmodule.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\note.gif" />
+    <Content Include="UserManagement\HelpFiles\images\note.png" />
+    <Content Include="UserManagement\HelpFiles\images\note.tif" />
+    <Content Include="UserManagement\HelpFiles\images\notes_large.gif" />
+    <Content Include="UserManagement\HelpFiles\images\ownerpermissionmatrix.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\ownerpermissions.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\PortSight Secure Access - Schema.gif" />
+    <Content Include="UserManagement\HelpFiles\images\primarykey.png" />
+    <Content Include="UserManagement\HelpFiles\images\protectedareashttphandler.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\protectedareashttpmodule.GIF" />
+    <Content Include="UserManagement\HelpFiles\images\relationship.png" />
+    <Content Include="UserManagement\HelpFiles\images\saauth_example_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\saauth_example_1_win.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SAFormsSample_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SAFormsSample_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SampleARWSTestFormVB.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SampleARWSTestFormVB_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SampleARWSTestFormVB_3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_overview.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_permissionmatrix.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_setup_0.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_setup_1.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_setup_2.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_setup_3.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_setup_4.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_setup_5.gif" />
+    <Content Include="UserManagement\HelpFiles\images\sa_setup_6.gif" />
+    <Content Include="UserManagement\HelpFiles\images\screencap.png" />
+    <Content Include="UserManagement\HelpFiles\images\secureaccess.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SecureAccess_Database.gif" />
+    <Content Include="UserManagement\HelpFiles\images\secureaccess_logo.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SeeAlso.bmp" />
+    <Content Include="UserManagement\HelpFiles\images\setting_project.gif" />
+    <Content Include="UserManagement\HelpFiles\images\SQLServerMixedMode.gif" />
+    <Content Include="UserManagement\HelpFiles\images\tick.png" />
+    <Content Include="UserManagement\HelpFiles\images\tip.gif" />
+    <Content Include="UserManagement\HelpFiles\images\tip.png" />
+    <Content Include="UserManagement\HelpFiles\images\tip.tif" />
+    <Content Include="UserManagement\HelpFiles\images\toc.gif" />
+    <Content Include="UserManagement\HelpFiles\images\toc_sel.gif" />
+    <Content Include="UserManagement\HelpFiles\images\warning.gif" />
+    <Content Include="UserManagement\HelpFiles\images\warning.png" />
+    <Content Include="UserManagement\HelpFiles\images\warning.tif" />
+    <Content Include="UserManagement\HelpFiles\Import from Microsoft Active Directory.html" />
+    <Content Include="UserManagement\HelpFiles\Import from ODBC Databases.html" />
+    <Content Include="UserManagement\HelpFiles\Import from Windows NT Domain.html" />
+    <Content Include="UserManagement\HelpFiles\Importing Users, User Groups and Organizational Units.html" />
+    <Content Include="UserManagement\HelpFiles\Installing and Configuring the ARWCFService and the Client Application.html" />
+    <Content Include="UserManagement\HelpFiles\Installing and Configuring the ARWebService and the Client Application.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0001.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0002.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0003.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0004.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0005.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0006.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0007.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0008.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0009.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0010.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0011.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0012.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0013.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0014.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0015.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0016.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0017.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0018.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0019.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0020.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0021.html" />
+    <Content Include="UserManagement\HelpFiles\KB-SA-0022.html" />
+    <Content Include="UserManagement\HelpFiles\Knowledgebase.html" />
+    <Content Include="UserManagement\HelpFiles\Managing X.509 Certificates.html" />
+    <Content Include="UserManagement\HelpFiles\Modifying Catalog Properties.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-admindelegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-delegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-deleteapp.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-editapp.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-newapp.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-settings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications-validity.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-applications.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-auditinglog.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-catalog-overview.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-catalog-settings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-catalog.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-customproperties-deleteproperty.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-customproperties-details.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-customproperties-editproperty.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-customproperties-newproperty.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-customproperties.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-effectivepermissionslist.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-admindelegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-delegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-deletegroup.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-editgroup.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-memberof.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-members.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-newgroup.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-permissionslist.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-settings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups-validity.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-groups.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-livesessions-howto.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-myadministration.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-mysettings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-admindelegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-delegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-deleteunit.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-editunit.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-memberof.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-members.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-modifyunitmembers.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-newunit.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-permissionslist.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-settings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits-validity.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-orgunits.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners-deleteowner.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners-editowner.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners-howto.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners-members.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners-newowner.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners-validity.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-owners.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissionmatrix-addoperator.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissionmatrix-details.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissionmatrix-removeoperator.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissionmatrix.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissiontypes-deletetype.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissiontypes-edittype.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissiontypes-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissiontypes-newtype.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-permissiontypes.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-admindelegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-delegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-deletearea.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-editarea.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-howto.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-newarea.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-settings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares-validity.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-protectedares.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-admindelegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-delegation.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-deleterole.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-editrole.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-memberof.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-members.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-newrole.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-permissionslist.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-settings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles-validity.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-roles.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-security.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-address.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-customfields.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-deleteuser.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-edit.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-general.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-memberof.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-newuser.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-notes.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-objectvalidity.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-organization.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-password.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-permissionslist.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-phones.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-settings.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users-userverification.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration-users.html" />
+    <Content Include="UserManagement\HelpFiles\psa-administration.html" />
+    <Content Include="UserManagement\HelpFiles\psa-devguide.html" />
+    <Content Include="UserManagement\HelpFiles\psa-gettingstarted.html" />
+    <Content Include="UserManagement\HelpFiles\psa-install-catalogmanager.html" />
+    <Content Include="UserManagement\HelpFiles\psa-install-setup.html" />
+    <Content Include="UserManagement\HelpFiles\psa-install-systemrequirements.html" />
+    <Content Include="UserManagement\HelpFiles\psa-install.html" />
+    <Content Include="UserManagement\HelpFiles\psa-overview.html" />
+    <Content Include="UserManagement\HelpFiles\psa-systemarchitecture.html" />
+    <Content Include="UserManagement\HelpFiles\psa-versions.html" />
+    <Content Include="UserManagement\HelpFiles\psa.html" />
+    <Content Include="UserManagement\HelpFiles\Registering an Existing Catalog.html" />
+    <Content Include="UserManagement\HelpFiles\Resource-Based Authorization %28Permissions%29.html" />
+    <Content Include="UserManagement\HelpFiles\Role-Based Authorization.html" />
+    <Content Include="UserManagement\HelpFiles\Running Secure Access on Web Farms.html" />
+    <Content Include="UserManagement\HelpFiles\script\dotnet.js" />
+    <Content Include="UserManagement\HelpFiles\script\helpstudio.js" />
+    <Content Include="UserManagement\HelpFiles\Secure Your Web Services.html" />
+    <Content Include="UserManagement\HelpFiles\Secure Your WebForms Applications.html" />
+    <Content Include="UserManagement\HelpFiles\Secure Your WinForms Applications.html" />
+    <Content Include="UserManagement\HelpFiles\Securing Your Web Services Using Secure Access and Microsoft WSE.html" />
+    <Content Include="UserManagement\HelpFiles\Set Up Your Own Certificate Service.html" />
+    <Content Include="UserManagement\HelpFiles\Setting Up the ODBC Import.html" />
+    <Content Include="UserManagement\HelpFiles\Setting Up the User Interface for Windows Authentication.html" />
+    <Content Include="UserManagement\HelpFiles\Storing and Retrieving User Settings in Your WinForms Applications.html" />
+    <Content Include="UserManagement\HelpFiles\Storing and Retrieving User Settings.html" />
+    <Content Include="UserManagement\HelpFiles\Storing User Settings.html" />
+    <Content Include="UserManagement\HelpFiles\stylesheets\dbstylesheet.css" />
+    <Content Include="UserManagement\HelpFiles\stylesheets\designtime.css" />
+    <Content Include="UserManagement\HelpFiles\stylesheets\dotnetstylesheet.css" />
+    <Content Include="UserManagement\HelpFiles\stylesheets\helpstudio.css" />
+    <Content Include="UserManagement\HelpFiles\stylesheets\printstylesheet.css" />
+    <Content Include="UserManagement\HelpFiles\Styles\Global.css" />
+    <Content Include="UserManagement\HelpFiles\Styles\MenuTree.css" />
+    <Content Include="UserManagement\HelpFiles\System Backup and Recovery.html" />
+    <Content Include="UserManagement\HelpFiles\System Requirements and Deployment Diagram WCF.html" />
+    <Content Include="UserManagement\HelpFiles\System Requirements and Deployment Diagram.html" />
+    <Content Include="UserManagement\HelpFiles\Uninstalling Secure Access.html" />
+    <Content Include="UserManagement\HelpFiles\Unregistering a Catalog.html" />
+    <Content Include="UserManagement\HelpFiles\Using ASP NET 2 0 HttpModule with Secure Access.html" />
+    <Content Include="UserManagement\HelpFiles\Using ASP NET 2 0 Membership with Secure Access.html" />
+    <Content Include="UserManagement\HelpFiles\Using ASP NET 2 0 ProfileProvider with Secure Access.html" />
+    <Content Include="UserManagement\HelpFiles\Using ASP NET 2 0 Role Manager with Secure Access.html" />
+    <Content Include="UserManagement\HelpFiles\Using Forms Authentication.html" />
+    <Content Include="UserManagement\HelpFiles\Using Secure Access User Controls.html" />
+    <Content Include="UserManagement\HelpFiles\Using Secure Access WCF Service %28ARWCFService%29.html" />
+    <Content Include="UserManagement\HelpFiles\Using Secure Access Web Service %28ARWebService%29.html" />
+    <Content Include="UserManagement\HelpFiles\Using Secure Access WinForms Controls - ARWSLogonCtrl and ARWSSetPasswordCtrl.html" />
+    <Content Include="UserManagement\HelpFiles\Using Secure Access WinForms Controls - LogonCtrl and SetPasswordCtrl.html" />
+    <Content Include="UserManagement\HelpFiles\Using Windows Authentication.html" />
+    <Content Include="UserManagement\HelpFiles\Viewing Web-Based User Interface.html" />
+    <Content Include="UserManagement\HelpFiles\webframe.html" />
+    <Content Include="UserManagement\HelpFiles\webindex.html" />
+    <Content Include="UserManagement\HelpFiles\webnav.html" />
+    <Content Include="UserManagement\HelpFiles\webtoc.html" />
+    <Content Include="UserManagement\HelpFiles\Writing Custom Event Handler.html" />
+    <Content Include="UserManagement\HelpHeader.aspx" />
+    <Content Include="UserManagement\Images\bground_Header.gif" />
+    <Content Include="UserManagement\Images\bground_HeaderVerticalLine.gif" />
+    <Content Include="UserManagement\Images\bground_Listing.gif" />
+    <Content Include="UserManagement\Images\bground_MenuTreeGradient.gif" />
+    <Content Include="UserManagement\Images\bground_ModalWindowHeader.gif" />
+    <Content Include="UserManagement\Images\bground_ModalWindowMenu.gif" />
+    <Content Include="UserManagement\Images\bground_SubMenuGradient.gif" />
+    <Content Include="UserManagement\Images\datetimearrow.gif" />
+    <Content Include="UserManagement\Images\folder.gif" />
+    <Content Include="UserManagement\Images\folderopen.gif" />
+    <Content Include="UserManagement\Images\i.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\Application.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\ApplicationPart.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\ApplicationRole.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\AuditLog.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\Catalog.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\Delete.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\Etc.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\MyAdministration.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\MySettings.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\New.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\OU.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\PermissionType.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\Schema.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\User.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\UserGroup.gif" />
+    <Content Include="UserManagement\Images\Icons\16x16\View.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\Application.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\ApplicationPart.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\ApplicationRole.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\AuditLog.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\Catalog.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\Delete.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\Help.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\MyAdministration.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\MySettings.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\New.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\OU.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\Permissions.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\PermissionType.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\Schema.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\ShowList.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\ShowMembers.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\User.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\UserGroup.gif" />
+    <Content Include="UserManagement\Images\Icons\20x20\View.gif" />
+    <Content Include="UserManagement\Images\Icons\Eye.gif" />
+    <Content Include="UserManagement\Images\Icons\Search.gif" />
+    <Content Include="UserManagement\Images\Icons\Search_Delete.gif" />
+    <Content Include="UserManagement\Images\Icons\View.gif" />
+    <Content Include="UserManagement\Images\L.gif" />
+    <Content Include="UserManagement\Images\Lminus.gif" />
+    <Content Include="UserManagement\Images\logon_stripe.gif" />
+    <Content Include="UserManagement\Images\logon_stripe_bold.gif" />
+    <Content Include="UserManagement\Images\logo_SecureAccess.gif" />
+    <Content Include="UserManagement\Images\Lplus.gif" />
+    <Content Include="UserManagement\Images\Rplus.gif" />
+    <Content Include="UserManagement\Images\System\application.gif" />
+    <Content Include="UserManagement\Images\System\applicationcontainer.gif" />
+    <Content Include="UserManagement\Images\System\applicationcontainer_open.gif" />
+    <Content Include="UserManagement\Images\System\application_open.gif" />
+    <Content Include="UserManagement\Images\System\orgunit.gif" />
+    <Content Include="UserManagement\Images\System\orgunit_open.gif" />
+    <Content Include="UserManagement\Images\System\System.base.gif" />
+    <Content Include="UserManagement\Images\System\System.base_open.gif" />
+    <Content Include="UserManagement\Images\System\System.catalog.gif" />
+    <Content Include="UserManagement\Images\System\System.catalog_open.gif" />
+    <Content Include="UserManagement\Images\System\System.empty.gif" />
+    <Content Include="UserManagement\Images\System\System.folder.gif" />
+    <Content Include="UserManagement\Images\System\System.folder_open.gif" />
+    <Content Include="UserManagement\Images\System\System.join.gif" />
+    <Content Include="UserManagement\Images\System\System.joinbottom.gif" />
+    <Content Include="UserManagement\Images\System\System.line.gif" />
+    <Content Include="UserManagement\Images\System\System.link.gif" />
+    <Content Include="UserManagement\Images\System\System.link_open.gif" />
+    <Content Include="UserManagement\Images\System\System.minus.gif" />
+    <Content Include="UserManagement\Images\System\System.minusbottom.gif" />
+    <Content Include="UserManagement\Images\System\System.myadministration.gif" />
+    <Content Include="UserManagement\Images\System\System.myadministration_open.gif" />
+    <Content Include="UserManagement\Images\System\System.nolines_minus.gif" />
+    <Content Include="UserManagement\Images\System\System.nolines_plus.gif" />
+    <Content Include="UserManagement\Images\System\System.plus.gif" />
+    <Content Include="UserManagement\Images\System\System.plusbottom.gif" />
+    <Content Include="UserManagement\Images\System\System.root.gif" />
+    <Content Include="UserManagement\Images\System\System.rootcontainer.gif" />
+    <Content Include="UserManagement\Images\System\System.rootcontainer_open.gif" />
+    <Content Include="UserManagement\Images\System\System.root_open.gif" />
+    <Content Include="UserManagement\Images\System\System.tree.gif" />
+    <Content Include="UserManagement\Images\System\System.treedown.gif" />
+    <Content Include="UserManagement\Images\System\System.treeleft.gif" />
+    <Content Include="UserManagement\Images\System\System.User.GIF" />
+    <Content Include="UserManagement\Images\System\System.User_open.GIF" />
+    <Content Include="UserManagement\Images\System\System.View.GIF" />
+    <Content Include="UserManagement\Images\T.gif" />
+    <Content Include="UserManagement\Images\Tminus.gif" />
+    <Content Include="UserManagement\Images\Tplus.gif" />
+    <Content Include="UserManagement\Images\Tree\blank-node.gif" />
+    <Content Include="UserManagement\Images\Tree\closed-node.gif" />
+    <Content Include="UserManagement\Images\Tree\edge-node.gif" />
+    <Content Include="UserManagement\Images\Tree\end-closed-node.gif" />
+    <Content Include="UserManagement\Images\Tree\end-node.gif" />
+    <Content Include="UserManagement\Images\Tree\end-open-node.gif" />
+    <Content Include="UserManagement\Images\Tree\node.gif" />
+    <Content Include="UserManagement\Images\Tree\open-node.gif" />
+    <Content Include="UserManagement\Images\white.gif" />
+    <Content Include="UserManagement\InFrame.aspx" />
+    <Content Include="UserManagement\LiveSessionList.aspx" />
+    <Content Include="UserManagement\LogonForm.aspx" />
+    <Content Include="UserManagement\MembershipMemberOf.aspx" />
+    <Content Include="UserManagement\MembershipMembers.aspx" />
+    <Content Include="UserManagement\Modules\ARTreeControl.ascx" />
+    <Content Include="UserManagement\Modules\ARTreeOU.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationPartDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationPartList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationPartMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationPartNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationProtectedAreaDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationProtectedAreaList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationProtectedAreaMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIApplicationProtectedAreaNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIAuditLogList.ascx" />
+    <Content Include="UserManagement\Modules\ARUICatalogMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUICatalogOverview.ascx" />
+    <Content Include="UserManagement\Modules\ARUIDelegatedAdmins.ascx" />
+    <Content Include="UserManagement\Modules\ARUIDelegatedUsers.ascx" />
+    <Content Include="UserManagement\Modules\ARUIEffectivePermissions.ascx" />
+    <Content Include="UserManagement\Modules\ARUIEffectiveRoles.ascx" />
+    <Content Include="UserManagement\Modules\ARUIGroupDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIGroupList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIGroupMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIGroupNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIHelpIcon.ascx" />
+    <Content Include="UserManagement\Modules\ARUILiveSessionList.ascx" />
+    <Content Include="UserManagement\Modules\ARUILogonForm.ascx" />
+    <Content Include="UserManagement\Modules\ARUIMembershipMemberOf.ascx" />
+    <Content Include="UserManagement\Modules\ARUIMembershipMembers.ascx" />
+    <Content Include="UserManagement\Modules\ARUIMembershipOwners.ascx" />
+    <Content Include="UserManagement\Modules\ARUIMenuControl.ascx" />
+    <Content Include="UserManagement\Modules\ARUIMyAdministration.ascx" />
+    <Content Include="UserManagement\Modules\ARUIMySettings.ascx" />
+    <Content Include="UserManagement\Modules\ARUIObjectDetailsValidity.ascx" />
+    <Content Include="UserManagement\Modules\ARUIObjectListbox.ascx" />
+    <Content Include="UserManagement\Modules\ARUIObjectProperty.ascx" />
+    <Content Include="UserManagement\Modules\ARUIObjectSelector.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOrgUnitDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOrgUnitList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOrgUnitMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOrgUnitNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOwnerDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOwnerDropDownList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOwnerList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOwnerMemberDetails.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOwnerMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIOwnerNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPageControl.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPageModal.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPermissionDetails.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPermissionMatrix.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPermissionTypeDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPermissionTypeList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPermissionTypeMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIPermissionTypeNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIProperties.ascx" />
+    <Content Include="UserManagement\Modules\ARUIRegistrationForm.ascx" />
+    <Content Include="UserManagement\Modules\ARUIRelationshipValidity.ascx" />
+    <Content Include="UserManagement\Modules\ARUIRoleDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIRoleList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIRoleMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIRoleNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUISaveScroll.ascx" />
+    <Content Include="UserManagement\Modules\ARUISchemaProperties.ascx" />
+    <Content Include="UserManagement\Modules\ARUISchemaPropertyDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUISchemaPropertyDetailsMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUISchemaPropertyNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUISendPassword.ascx" />
+    <Content Include="UserManagement\Modules\ARUISetPassword.ascx" />
+    <Content Include="UserManagement\Modules\ARUISignOut.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsAccount.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsAddress.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsCustomFields.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsGeneral.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsNotes.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsOrganization.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsPassword.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDetailsPhones.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserDropDownList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserList.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserMenu.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserNew.ascx" />
+    <Content Include="UserManagement\Modules\ARUIUserSelection.ascx" />
+    <Content Include="UserManagement\MyAdministration.aspx" />
+    <Content Include="UserManagement\MySettings.aspx" />
+    <Content Include="UserManagement\ObjectDetailsValidity.aspx" />
+    <Content Include="UserManagement\ObjectProperty.aspx" />
+    <Content Include="UserManagement\ObjectSelector.aspx" />
+    <Content Include="UserManagement\ObjectSelectorObjectList.aspx" />
+    <Content Include="UserManagement\ObjectSelectorObjectTree.aspx" />
+    <Content Include="UserManagement\OrgUnitDetailsGeneral.aspx" />
+    <Content Include="UserManagement\OrgUnitList.aspx" />
+    <Content Include="UserManagement\OrgUnitMenu.aspx" />
+    <Content Include="UserManagement\OrgUnitNew.aspx" />
+    <Content Include="UserManagement\OwnerDetailsGeneral.aspx" />
+    <Content Include="UserManagement\OwnerList.aspx" />
+    <Content Include="UserManagement\OwnerMemberDetails.aspx" />
+    <Content Include="UserManagement\OwnerMembers.aspx" />
+    <Content Include="UserManagement\OwnerMenu.aspx" />
+    <Content Include="UserManagement\OwnerNew.aspx" />
+    <Content Include="UserManagement\PermissionDetails.aspx" />
+    <Content Include="UserManagement\PermissionMatrix.aspx" />
+    <Content Include="UserManagement\PermissionTypeDetailsGeneral.aspx" />
+    <Content Include="UserManagement\PermissionTypeList.aspx" />
+    <Content Include="UserManagement\PermissionTypeMenu.aspx" />
+    <Content Include="UserManagement\PermissionTypeNew.aspx" />
+    <Content Include="UserManagement\ProtectedAreaDetailsGeneral.aspx" />
+    <Content Include="UserManagement\ProtectedAreaList.aspx" />
+    <Content Include="UserManagement\ProtectedAreaMenu.aspx" />
+    <Content Include="UserManagement\ProtectedAreaNew.aspx" />
+    <Content Include="UserManagement\RelationshipValidity.aspx" />
+    <Content Include="UserManagement\RoleDetailsGeneral.aspx" />
+    <Content Include="UserManagement\RoleList.aspx" />
+    <Content Include="UserManagement\RoleMenu.aspx" />
+    <Content Include="UserManagement\RoleNew.aspx" />
+    <Content Include="UserManagement\SchemaAbout.aspx" />
+    <Content Include="UserManagement\SchemaList.aspx" />
+    <Content Include="UserManagement\SchemaPropertyDetailsGeneral.aspx" />
+    <Content Include="UserManagement\SchemaPropertyDetailsMenu.aspx" />
+    <Content Include="UserManagement\SchemaPropertyNew.aspx" />
+    <Content Include="UserManagement\SecureAccess.csproj" />
+    <Content Include="UserManagement\Styles\ARStyles.css" />
+    <Content Include="UserManagement\UserDetailsAccount.aspx" />
+    <Content Include="UserManagement\UserDetailsAddress.aspx" />
+    <Content Include="UserManagement\UserDetailsCustomFields.aspx" />
+    <Content Include="UserManagement\UserDetailsGeneral.aspx" />
+    <Content Include="UserManagement\UserDetailsNotes.aspx" />
+    <Content Include="UserManagement\UserDetailsOrganization.aspx" />
+    <Content Include="UserManagement\UserDetailsPassword.aspx" />
+    <Content Include="UserManagement\UserDetailsPhones.aspx" />
+    <Content Include="UserManagement\UserDetailsSettings.aspx" />
+    <Content Include="UserManagement\UserList.aspx" />
+    <Content Include="UserManagement\UserMenu.aspx" />
+    <Content Include="UserManagement\UserNew.aspx" />
+    <Content Include="FINANCEMANAGER.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\1324638439_user-group-new.png" />
+    <Content Include="images\AddLoan.png" />
+    <Content Include="images\addNew.png" />
+    <Content Include="images\Chrysanthemum.jpg" />
+    <Content Include="images\details.png" />
+    <Content Include="images\Groups.png" />
+    <Content Include="images\Leftarrow.png" />
+    <Content Include="images\loginIcon.png" />
+    <Content Include="images\No.png" />
+    <Content Include="images\NoImage.png" />
+    <Content Include="images\notes.gif" />
+    <Content Include="images\personalinformation.png" />
+    <Content Include="images\personalloan.png" />
+    <Content Include="images\printStatement.png" />
+    <Content Include="images\Rightarrow.png" />
+    <Content Include="images\searchButton.png" />
+    <Content Include="images\signature.png" />
+    <Content Include="images\status_blue.png" />
+    <Content Include="images\status_red.png" />
+    <Content Include="images\status_yellow.png" />
+    <Content Include="images\UserGroupicon.png" />
+    <Content Include="images\usericon.png" />
+    <Content Include="admin\MemberDeposit.aspx" />
+    <Content Include="admin\MemberDetails.aspx" />
+    <Content Include="admin\Members.aspx" />
+    <Content Include="admin\LoanDefaults.aspx" />
+    <Content Include="images\Yes.png" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\jquery.hoverIntent.minified.js" />
+    <Content Include="Scripts\jquery.jscrollpane.js" />
+    <Content Include="Scripts\jquery.jscrollpane.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Scripts\jquery.mousewheel.js" />
+    <Content Include="Setups\IdentityTypes.aspx" />
+    <Content Include="Sevices\FinanceManagerWebService.asmx" />
+    <Content Include="SQLScripts\FinanceManagerCache.dbo.CompanyProfile.sql" />
+    <Content Include="SQLScripts\FinanceManagerCache.dbo.Members.sql" />
+    <Content Include="SQLScripts\FinanceManagerCache.FINANCEMANAGER.sql" />
+    <Content Include="SQLUndoScripts\FinanceManagerCache.dbo.CompanyProfile.disable.sql" />
+    <Content Include="SQLUndoScripts\FinanceManagerCache.dbo.Members.disable.sql" />
+    <Content Include="SQLUndoScripts\FinanceManagerCache.FINANCEMANAGER.disable.sql" />
+    <Content Include="Styles\blank.gif" />
+    <Content Include="Styles\blue.css" />
+    <Content Include="Styles\fancybox_loading.gif" />
+    <Content Include="Styles\fancybox_sprite.png" />
+    <Content Include="Styles\jquery.fancybox.css" />
+    <Content Include="Styles\jquery.jscrollpane.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="UserControls\DateWebUserControl.ascx" />
+    <Content Include="UserControls\FixedDepositInvestmentToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\PaymentMethodWebUserControl.ascx" />
+    <Content Include="UserControls\SUSUInvestmentToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\UsersToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\GroupInvestmentToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\GroupLoansToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\GroupToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\MemberToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\LoansToolBarWebUserControl.ascx" />
+    <Content Include="UserControls\InvestmentToolBarWebUserControl.ascx" />
+    <Content Include="UserManagement_old\ChangePassword.aspx" />
+    <Content Include="UserManagement_old\PasswordSuccessfullyChanged.aspx" />
+    <Content Include="UserManagement_old\UsersAdminEdit.aspx" />
+    <Content Include="UserManagement_old\UsersList.aspx" />
+    <Content Include="UserManagement_old\UsersAdmin.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="admin\Withdrawal.aspx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AccountTypeFeatures.aspx.cs">
+      <DependentUpon>AccountTypeFeatures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AccountTypeFeatures.aspx.designer.cs">
+      <DependentUpon>AccountTypeFeatures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AccountTypeFeatureEdit.aspx.cs">
+      <DependentUpon>AccountTypeFeatureEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AccountTypeFeatureEdit.aspx.designer.cs">
+      <DependentUpon>AccountTypeFeatureEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AppliedFeaturesComplete.aspx.cs">
+      <DependentUpon>AppliedFeaturesComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AppliedFeaturesComplete.aspx.designer.cs">
+      <DependentUpon>AppliedFeaturesComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ApplyInsterest.aspx.cs">
+      <DependentUpon>ApplyInsterest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ApplyInsterest.aspx.designer.cs">
+      <DependentUpon>ApplyInsterest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Backup\databaseBackup.aspx.cs">
+      <DependentUpon>databaseBackup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Backup\databaseBackup.aspx.designer.cs">
+      <DependentUpon>databaseBackup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\BoG\MF7C.aspx.cs">
+      <DependentUpon>MF7C.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\BoG\MF7C.aspx.designer.cs">
+      <DependentUpon>MF7C.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CompanyProfile.aspx.cs">
+      <DependentUpon>CompanyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CompanyProfile.aspx.designer.cs">
+      <DependentUpon>CompanyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Collaterals.aspx.cs">
+      <DependentUpon>Collaterals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Collaterals.aspx.designer.cs">
+      <DependentUpon>Collaterals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ConfirmCancelPayment.aspx.cs">
+      <DependentUpon>ConfirmCancelPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ConfirmCancelPayment.aspx.designer.cs">
+      <DependentUpon>ConfirmCancelPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ContributionsReport.aspx.cs">
+      <DependentUpon>ContributionsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ContributionsReport.aspx.designer.cs">
+      <DependentUpon>ContributionsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ContributionReceipt.aspx.cs">
+      <DependentUpon>ContributionReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ContributionReceipt.aspx.designer.cs">
+      <DependentUpon>ContributionReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ContributionReceipt_Group.aspx.cs">
+      <DependentUpon>ContributionReceipt_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ContributionReceipt_Group.aspx.designer.cs">
+      <DependentUpon>ContributionReceipt_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AccountTypesSetup.aspx.cs">
+      <DependentUpon>AccountTypesSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AccountTypesSetup.aspx.designer.cs">
+      <DependentUpon>AccountTypesSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ContributionsReportForMobileBanker.aspx.cs">
+      <DependentUpon>ContributionsReportForMobileBanker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ContributionsReportForMobileBanker.aspx.designer.cs">
+      <DependentUpon>ContributionsReportForMobileBanker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AppliedInterestForPrintReport.aspx.cs">
+      <DependentUpon>AppliedInterestForPrintReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AppliedInterestForPrintReport.aspx.designer.cs">
+      <DependentUpon>AppliedInterestForPrintReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CashCollectionReportReport.aspx.cs">
+      <DependentUpon>CashCollectionReportReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CashCollectionReportReport.aspx.designer.cs">
+      <DependentUpon>CashCollectionReportReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Branches.aspx.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Branches.aspx.designer.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ApplyAccountTypeFeatures.aspx.cs">
+      <DependentUpon>ApplyAccountTypeFeatures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ApplyAccountTypeFeatures.aspx.designer.cs">
+      <DependentUpon>ApplyAccountTypeFeatures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AppliedAccountTypeFeaturesReport.aspx.cs">
+      <DependentUpon>AppliedAccountTypeFeaturesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AppliedAccountTypeFeaturesReport.aspx.designer.cs">
+      <DependentUpon>AppliedAccountTypeFeaturesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TotalAppliedInterestAndDeductionsReport.aspx.cs">
+      <DependentUpon>TotalAppliedInterestAndDeductionsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TotalAppliedInterestAndDeductionsReport.aspx.designer.cs">
+      <DependentUpon>TotalAppliedInterestAndDeductionsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Fix\ApplyFeaturesWithinRange.aspx.cs">
+      <DependentUpon>ApplyFeaturesWithinRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Fix\ApplyFeaturesWithinRange.aspx.designer.cs">
+      <DependentUpon>ApplyFeaturesWithinRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Fix\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Fix\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Fix\default_31_jan_2014.aspx.cs">
+      <DependentUpon>default_31_jan_2014.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Fix\default_31_jan_2014.aspx.designer.cs">
+      <DependentUpon>default_31_jan_2014.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MobileBankerImageDisplay.ashx.cs">
+      <DependentUpon>MobileBankerImageDisplay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanStatement_Real_Group.aspx.cs">
+      <DependentUpon>LoanStatement_Real_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanStatement_Real_Group.aspx.designer.cs">
+      <DependentUpon>LoanStatement_Real_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment_New_Type2.aspx.cs">
+      <DependentUpon>CustomerStatementReport_Investment_New_Type2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment_New_Type2.aspx.designer.cs">
+      <DependentUpon>CustomerStatementReport_Investment_New_Type2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment_MemberPreselected.aspx.cs">
+      <DependentUpon>CustomerStatementReport_Investment_MemberPreselected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment_MemberPreselected.aspx.designer.cs">
+      <DependentUpon>CustomerStatementReport_Investment_MemberPreselected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment_New.aspx.cs">
+      <DependentUpon>CustomerStatementReport_Investment_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment_New.aspx.designer.cs">
+      <DependentUpon>CustomerStatementReport_Investment_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TotalCashReceivedReport.aspx.cs">
+      <DependentUpon>TotalCashReceivedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TotalCashReceivedReport.aspx.designer.cs">
+      <DependentUpon>TotalCashReceivedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TotalCashDisbursedReport.aspx.cs">
+      <DependentUpon>TotalCashDisbursedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TotalCashDisbursedReport.aspx.designer.cs">
+      <DependentUpon>TotalCashDisbursedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TransferMoney.aspx.cs">
+      <DependentUpon>TransferMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TransferMoney.aspx.designer.cs">
+      <DependentUpon>TransferMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\trialExpiration.aspx.cs">
+      <DependentUpon>trialExpiration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\trialExpiration.aspx.designer.cs">
+      <DependentUpon>trialExpiration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\UserManagementHome.aspx.cs">
+      <DependentUpon>UserManagementHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\UserManagementHome.aspx.designer.cs">
+      <DependentUpon>UserManagementHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WithdrawalsReportForMobileBanker.aspx.cs">
+      <DependentUpon>WithdrawalsReportForMobileBanker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WithdrawalsReportForMobileBanker.aspx.designer.cs">
+      <DependentUpon>WithdrawalsReportForMobileBanker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentStatement_Real_Group.aspx.cs">
+      <DependentUpon>InvestmentStatement_Real_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentStatement_Real_Group.aspx.designer.cs">
+      <DependentUpon>InvestmentStatement_Real_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MobileBankerDetails.aspx.cs">
+      <DependentUpon>MobileBankerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MobileBankerDetails.aspx.designer.cs">
+      <DependentUpon>MobileBankerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MobileBankersList.aspx.cs">
+      <DependentUpon>MobileBankersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MobileBankersList.aspx.designer.cs">
+      <DependentUpon>MobileBankersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentsReport_regular.aspx.cs">
+      <DependentUpon>InvestmentsReport_regular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentsReport_regular.aspx.designer.cs">
+      <DependentUpon>InvestmentsReport_regular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentTypesSetup.aspx.cs">
+      <DependentUpon>InvestmentTypesSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentTypesSetup.aspx.designer.cs">
+      <DependentUpon>InvestmentTypesSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanTypesSetup.aspx.cs">
+      <DependentUpon>LoanTypesSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanTypesSetup.aspx.designer.cs">
+      <DependentUpon>LoanTypesSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OccupationsSetup.aspx.cs">
+      <DependentUpon>OccupationsSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OccupationsSetup.aspx.designer.cs">
+      <DependentUpon>OccupationsSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewLoan_MemberPreSelected.aspx.cs">
+      <DependentUpon>NewLoan_MemberPreSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewLoan_MemberPreSelected.aspx.designer.cs">
+      <DependentUpon>NewLoan_MemberPreSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewInvestment_FixedDeposit_MemberPreSelected.aspx.cs">
+      <DependentUpon>NewInvestment_FixedDeposit_MemberPreSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewInvestment_FixedDeposit_MemberPreSelected.aspx.designer.cs">
+      <DependentUpon>NewInvestment_FixedDeposit_MemberPreSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewSusuInvestment_MemberPreselected.aspx.cs">
+      <DependentUpon>NewSusuInvestment_MemberPreselected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewSusuInvestment_MemberPreselected.aspx.designer.cs">
+      <DependentUpon>NewSusuInvestment_MemberPreselected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewInvestment_MemberPreSelected.aspx.cs">
+      <DependentUpon>NewInvestment_MemberPreSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewInvestment_MemberPreSelected.aspx.designer.cs">
+      <DependentUpon>NewInvestment_MemberPreSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewEmployeeLoan.aspx.cs">
+      <DependentUpon>NewEmployeeLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewEmployeeLoan.aspx.designer.cs">
+      <DependentUpon>NewEmployeeLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\IDPhotoImageDisplay.ashx.cs">
+      <DependentUpon>IDPhotoImageDisplay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RecordMobileBankerCashCollection.aspx.cs">
+      <DependentUpon>RecordMobileBankerCashCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RecordMobileBankerCashCollection.aspx.designer.cs">
+      <DependentUpon>RecordMobileBankerCashCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SignatureImageDisplay.ashx.cs">
+      <DependentUpon>SignatureImageDisplay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\FixedDepositInvestmentWithdrawal_Group.aspx.cs">
+      <DependentUpon>FixedDepositInvestmentWithdrawal_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\FixedDepositInvestmentWithdrawal_Group.aspx.designer.cs">
+      <DependentUpon>FixedDepositInvestmentWithdrawal_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SUSUContributionReceipt_Group.aspx.cs">
+      <DependentUpon>SUSUContributionReceipt_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SUSUContributionReceipt_Group.aspx.designer.cs">
+      <DependentUpon>SUSUContributionReceipt_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RollOverInvestment.aspx.cs">
+      <DependentUpon>RollOverInvestment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RollOverInvestment.aspx.designer.cs">
+      <DependentUpon>RollOverInvestment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoansRepaymentReport.aspx.cs">
+      <DependentUpon>LoansRepaymentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoansRepaymentReport.aspx.designer.cs">
+      <DependentUpon>LoansRepaymentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SUSUContributionReceipt.aspx.cs">
+      <DependentUpon>SUSUContributionReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SUSUContributionReceipt.aspx.designer.cs">
+      <DependentUpon>SUSUContributionReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SUSUInvestmentStatement.aspx.cs">
+      <DependentUpon>SUSUInvestmentStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SUSUInvestmentStatement.aspx.designer.cs">
+      <DependentUpon>SUSUInvestmentStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\FixedDepositInvestmentWithdrawal.aspx.cs">
+      <DependentUpon>FixedDepositInvestmentWithdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\FixedDepositInvestmentWithdrawal.aspx.designer.cs">
+      <DependentUpon>FixedDepositInvestmentWithdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\FixedDepositInvestmentStatement.aspx.cs">
+      <DependentUpon>FixedDepositInvestmentStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\FixedDepositInvestmentStatement.aspx.designer.cs">
+      <DependentUpon>FixedDepositInvestmentStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewInvestment_FixedDeposit.aspx.cs">
+      <DependentUpon>NewInvestment_FixedDeposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewInvestment_FixedDeposit.aspx.designer.cs">
+      <DependentUpon>NewInvestment_FixedDeposit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment.aspx.cs">
+      <DependentUpon>CustomerStatementReport_Investment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Investment.aspx.designer.cs">
+      <DependentUpon>CustomerStatementReport_Investment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Loan.aspx.cs">
+      <DependentUpon>CustomerStatementReport_Loan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport_Loan.aspx.designer.cs">
+      <DependentUpon>CustomerStatementReport_Loan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanRepaymentWithInvestment_Group.aspx.cs">
+      <DependentUpon>LoanRepaymentWithInvestment_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanRepaymentWithInvestment_Group.aspx.designer.cs">
+      <DependentUpon>LoanRepaymentWithInvestment_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanRepaymentWithInvestment.aspx.cs">
+      <DependentUpon>LoanRepaymentWithInvestment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanRepaymentWithInvestment.aspx.designer.cs">
+      <DependentUpon>LoanRepaymentWithInvestment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MaturedInvestmentsReport.aspx.cs">
+      <DependentUpon>MaturedInvestmentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MaturedInvestmentsReport.aspx.designer.cs">
+      <DependentUpon>MaturedInvestmentsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RepaymentReceipt_Group.aspx.cs">
+      <DependentUpon>RepaymentReceipt_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RepaymentReceipt_Group.aspx.designer.cs">
+      <DependentUpon>RepaymentReceipt_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport.aspx.cs">
+      <DependentUpon>CustomerStatementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CustomerStatementReport.aspx.designer.cs">
+      <DependentUpon>CustomerStatementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OverdueLoansReport.aspx.cs">
+      <DependentUpon>OverdueLoansReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OverdueLoansReport.aspx.designer.cs">
+      <DependentUpon>OverdueLoansReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WithdrawalsReport.aspx.cs">
+      <DependentUpon>WithdrawalsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WithdrawalsReport.aspx.designer.cs">
+      <DependentUpon>WithdrawalsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentsReport.aspx.cs">
+      <DependentUpon>InvestmentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentsReport.aspx.designer.cs">
+      <DependentUpon>InvestmentsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoansDisbursedReport.aspx.cs">
+      <DependentUpon>LoansDisbursedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoansDisbursedReport.aspx.designer.cs">
+      <DependentUpon>LoansDisbursedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupsSUSUInvestmentContribution.aspx.cs">
+      <DependentUpon>GroupsSUSUInvestmentContribution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupsSUSUInvestmentContribution.aspx.designer.cs">
+      <DependentUpon>GroupsSUSUInvestmentContribution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupSUSUInvestmentWithdrawal.aspx.cs">
+      <DependentUpon>GroupSUSUInvestmentWithdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupSUSUInvestmentWithdrawal.aspx.designer.cs">
+      <DependentUpon>GroupSUSUInvestmentWithdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupInvestmentWithdrawal.aspx.cs">
+      <DependentUpon>GroupInvestmentWithdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupInvestmentWithdrawal.aspx.designer.cs">
+      <DependentUpon>GroupInvestmentWithdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupInvestmentContribution.aspx.cs">
+      <DependentUpon>GroupInvestmentContribution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupInvestmentContribution.aspx.designer.cs">
+      <DependentUpon>GroupInvestmentContribution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupInvestmentStatement.aspx.cs">
+      <DependentUpon>GroupInvestmentStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupInvestmentStatement.aspx.designer.cs">
+      <DependentUpon>GroupInvestmentStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupInvestments.aspx.cs">
+      <DependentUpon>GroupInvestments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupInvestments.aspx.designer.cs">
+      <DependentUpon>GroupInvestments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SUSUInvestmentWithdrawal.aspx.cs">
+      <DependentUpon>SUSUInvestmentWithdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SUSUInvestmentWithdrawal.aspx.designer.cs">
+      <DependentUpon>SUSUInvestmentWithdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SUSUInvestmentContribution.aspx.cs">
+      <DependentUpon>SUSUInvestmentContribution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SUSUInvestmentContribution.aspx.designer.cs">
+      <DependentUpon>SUSUInvestmentContribution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewSusuInvestment.aspx.cs">
+      <DependentUpon>NewSusuInvestment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewSusuInvestment.aspx.designer.cs">
+      <DependentUpon>NewSusuInvestment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanStatement_Real.aspx.cs">
+      <DependentUpon>LoanStatement_Real.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanStatement_Real.aspx.designer.cs">
+      <DependentUpon>LoanStatement_Real.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentStatement_Real.aspx.cs">
+      <DependentUpon>InvestmentStatement_Real.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentStatement_Real.aspx.designer.cs">
+      <DependentUpon>InvestmentStatement_Real.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MemberInvestments.aspx.cs">
+      <DependentUpon>MemberInvestments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MemberInvestments.aspx.designer.cs">
+      <DependentUpon>MemberInvestments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentStatement.aspx.cs">
+      <DependentUpon>InvestmentStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentStatement.aspx.designer.cs">
+      <DependentUpon>InvestmentStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Groups.aspx.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Groups.aspx.designer.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentDurations.aspx.cs">
+      <DependentUpon>InvestmentDurations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentDurations.aspx.designer.cs">
+      <DependentUpon>InvestmentDurations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentWithdrawal.aspx.cs">
+      <DependentUpon>InvestmentWithdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentWithdrawal.aspx.designer.cs">
+      <DependentUpon>InvestmentWithdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvestmentContribution.aspx.cs">
+      <DependentUpon>InvestmentContribution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvestmentContribution.aspx.designer.cs">
+      <DependentUpon>InvestmentContribution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanRepayment_old.aspx.cs">
+      <DependentUpon>LoanRepayment_old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanRepayment_old.aspx.designer.cs">
+      <DependentUpon>LoanRepayment_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewInvestment.aspx.cs">
+      <DependentUpon>NewInvestment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewInvestment.aspx.designer.cs">
+      <DependentUpon>NewInvestment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupLoanRepayment.aspx.cs">
+      <DependentUpon>GroupLoanRepayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupLoanRepayment.aspx.designer.cs">
+      <DependentUpon>GroupLoanRepayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GroupLoansLoans.aspx.cs">
+      <DependentUpon>GroupLoansLoans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GroupLoansLoans.aspx.designer.cs">
+      <DependentUpon>GroupLoansLoans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanStatement_Group.aspx.cs">
+      <DependentUpon>LoanStatement_Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanStatement_Group.aspx.designer.cs">
+      <DependentUpon>LoanStatement_Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MemberGroupDetails.aspx.cs">
+      <DependentUpon>MemberGroupDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MemberGroupDetails.aspx.designer.cs">
+      <DependentUpon>MemberGroupDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GuarantorDetails.aspx.cs">
+      <DependentUpon>GuarantorDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GuarantorDetails.aspx.designer.cs">
+      <DependentUpon>GuarantorDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\DefaultPageSite.Master.cs">
+      <DependentUpon>DefaultPageSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\DefaultPageSite.Master.designer.cs">
+      <DependentUpon>DefaultPageSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Deposit.aspx.cs">
+      <DependentUpon>Deposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Deposit.aspx.designer.cs">
+      <DependentUpon>Deposit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanDurations.aspx.cs">
+      <DependentUpon>LoanDurations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanDurations.aspx.designer.cs">
+      <DependentUpon>LoanDurations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanRepayment.aspx.cs">
+      <DependentUpon>LoanRepayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanRepayment.aspx.designer.cs">
+      <DependentUpon>LoanRepayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanSsttings.aspx.cs">
+      <DependentUpon>LoanSsttings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanSsttings.aspx.designer.cs">
+      <DependentUpon>LoanSsttings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanStatement.aspx.cs">
+      <DependentUpon>LoanStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanStatement.aspx.designer.cs">
+      <DependentUpon>LoanStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MemberDeposit.aspx.cs">
+      <DependentUpon>MemberDeposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MemberDeposit.aspx.designer.cs">
+      <DependentUpon>MemberDeposit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MemberLoans.aspx.cs">
+      <DependentUpon>MemberLoans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MemberLoans.aspx.designer.cs">
+      <DependentUpon>MemberLoans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MemberStatement.aspx.cs">
+      <DependentUpon>MemberStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MemberStatement.aspx.designer.cs">
+      <DependentUpon>MemberStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NewLoan.aspx.cs">
+      <DependentUpon>NewLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NewLoan.aspx.designer.cs">
+      <DependentUpon>NewLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RepaymentFrequency.aspx.cs">
+      <DependentUpon>RepaymentFrequency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RepaymentFrequency.aspx.designer.cs">
+      <DependentUpon>RepaymentFrequency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RepaymentReceipt.aspx.cs">
+      <DependentUpon>RepaymentReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RepaymentReceipt.aspx.designer.cs">
+      <DependentUpon>RepaymentReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RepaymentReceipt2.aspx.cs">
+      <DependentUpon>RepaymentReceipt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RepaymentReceipt2.aspx.designer.cs">
+      <DependentUpon>RepaymentReceipt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RunEndOfDay.aspx.cs">
+      <DependentUpon>RunEndOfDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RunEndOfDay.aspx.designer.cs">
+      <DependentUpon>RunEndOfDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SearchPage.aspx.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SearchPage.aspx.designer.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\userManagement2.aspx.cs">
+      <DependentUpon>userManagement2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\userManagement2.aspx.designer.cs">
+      <DependentUpon>userManagement2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_userManagement.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsMobileBanker.cs" />
+    <Compile Include="clsMobileBankerMember.cs" />
+    <Compile Include="clsMobileBankerMemberGroup.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FailMessages.cs" />
+    <Compile Include="noMenu.Master.cs">
+      <DependentUpon>noMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noMenu.Master.designer.cs">
+      <DependentUpon>noMenu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Setups\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setups\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberToolBarWebUserControl_Investment.ascx.cs">
+      <DependentUpon>MemberToolBarWebUserControl_Investment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberToolBarWebUserControl_Investment.ascx.designer.cs">
+      <DependentUpon>MemberToolBarWebUserControl_Investment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationDetailsGeneral.aspx.cs">
+      <DependentUpon>ApplicationDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationList.aspx.cs">
+      <DependentUpon>ApplicationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationMenu.aspx.cs">
+      <DependentUpon>ApplicationMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationNew.aspx.cs">
+      <DependentUpon>ApplicationNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationPartDetailsGeneral.aspx.cs">
+      <DependentUpon>ApplicationPartDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationPartList.aspx.cs">
+      <DependentUpon>ApplicationPartList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationPartMenu.aspx.cs">
+      <DependentUpon>ApplicationPartMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ApplicationPartNew.aspx.cs">
+      <DependentUpon>ApplicationPartNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ARPermissionConstants.cs" />
+    <Compile Include="UserManagement\ARTree.aspx.cs">
+      <DependentUpon>ARTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ARUtilities.cs" />
+    <Compile Include="UserManagement\AuditLogList.aspx.cs">
+      <DependentUpon>AuditLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\CatalogMenu.aspx.cs">
+      <DependentUpon>CatalogMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\CatalogOverview.aspx.cs">
+      <DependentUpon>CatalogOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\DateTimeControl.cs" />
+    <Compile Include="UserManagement\DateTimeDialog.aspx.cs">
+      <DependentUpon>DateTimeDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Defaultx.aspx.cs">
+      <DependentUpon>Defaultx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Defaultx.aspx.designer.cs">
+      <DependentUpon>Defaultx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\DelegatedAdmins.aspx.cs">
+      <DependentUpon>DelegatedAdmins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\DelegatedUsers.aspx.cs">
+      <DependentUpon>DelegatedUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\EffectivePermissions.aspx.cs">
+      <DependentUpon>EffectivePermissions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\EffectivePermissions.aspx.designer.cs">
+      <DependentUpon>EffectivePermissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\EffectiveRoles.aspx.cs">
+      <DependentUpon>EffectiveRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\EffectiveRoles.aspx.designer.cs">
+      <DependentUpon>EffectiveRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\Functions.cs" />
+    <Compile Include="UserManagement\GroupDetailsGeneral.aspx.cs">
+      <DependentUpon>GroupDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\GroupList.aspx.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\GroupMenu.aspx.cs">
+      <DependentUpon>GroupMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\GroupNew.aspx.cs">
+      <DependentUpon>GroupNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\header.aspx.cs">
+      <DependentUpon>Header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\HelpContentFrameset.aspx.cs">
+      <DependentUpon>HelpContentFrameset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\HelpHeader.aspx.cs">
+      <DependentUpon>HelpHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\InFrame.aspx.cs">
+      <DependentUpon>InFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\LiveSessionList.aspx.cs">
+      <DependentUpon>LiveSessionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\LogonForm.aspx.cs">
+      <DependentUpon>LogonForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\MembershipMemberOf.aspx.cs">
+      <DependentUpon>MembershipMemberOf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\MembershipMembers.aspx.cs">
+      <DependentUpon>MembershipMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ModuleBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARTreeControl.ascx.cs">
+      <DependentUpon>ARTreeControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARTreeOU.ascx.cs">
+      <DependentUpon>ARTreeOU.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIApplicationDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationList.ascx.cs">
+      <DependentUpon>ARUIApplicationList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationMenu.ascx.cs">
+      <DependentUpon>ARUIApplicationMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationNew.ascx.cs">
+      <DependentUpon>ARUIApplicationNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationPartDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIApplicationPartDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationPartList.ascx.cs">
+      <DependentUpon>ARUIApplicationPartList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationPartMenu.ascx.cs">
+      <DependentUpon>ARUIApplicationPartMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationPartNew.ascx.cs">
+      <DependentUpon>ARUIApplicationPartNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationProtectedAreaDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIApplicationProtectedAreaDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationProtectedAreaList.ascx.cs">
+      <DependentUpon>ARUIApplicationProtectedAreaList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationProtectedAreaMenu.ascx.cs">
+      <DependentUpon>ARUIApplicationProtectedAreaMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIApplicationProtectedAreaNew.ascx.cs">
+      <DependentUpon>ARUIApplicationProtectedAreaNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIAuditLogList.ascx.cs">
+      <DependentUpon>ARUIAuditLogList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUICatalogMenu.ascx.cs">
+      <DependentUpon>ARUICatalogMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUICatalogOverview.ascx.cs">
+      <DependentUpon>ARUICatalogOverview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIDelegatedAdmins.ascx.cs">
+      <DependentUpon>ARUIDelegatedAdmins.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIDelegatedUsers.ascx.cs">
+      <DependentUpon>ARUIDelegatedUsers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIEffectivePermissions.ascx.cs">
+      <DependentUpon>ARUIEffectivePermissions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIEffectivePermissions.ascx.designer.cs">
+      <DependentUpon>ARUIEffectivePermissions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIEffectiveRoles.ascx.cs">
+      <DependentUpon>ARUIEffectiveRoles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIEffectiveRoles.ascx.designer.cs">
+      <DependentUpon>ARUIEffectiveRoles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIGroupDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIGroupDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIGroupList.ascx.cs">
+      <DependentUpon>ARUIGroupList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIGroupMenu.ascx.cs">
+      <DependentUpon>ARUIGroupMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIGroupNew.ascx.cs">
+      <DependentUpon>ARUIGroupNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIHelpIcon.ascx.cs">
+      <DependentUpon>ARUIHelpIcon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUILiveSessionList.ascx.cs">
+      <DependentUpon>ARUILiveSessionList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUILogonForm.ascx.cs">
+      <DependentUpon>ARUILogonForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIMembershipMemberOf.ascx.cs">
+      <DependentUpon>ARUIMembershipMemberOf.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIMembershipMembers.ascx.cs">
+      <DependentUpon>ARUIMembershipMembers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIMembershipOwners.ascx.cs">
+      <DependentUpon>ARUIMembershipOwners.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIMenuControl.ascx.cs">
+      <DependentUpon>ARUIMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIMyAdministration.ascx.cs">
+      <DependentUpon>ARUIMyAdministration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIMySettings.ascx.cs">
+      <DependentUpon>ARUIMySettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIObjectDetailsValidity.ascx.cs">
+      <DependentUpon>ARUIObjectDetailsValidity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIObjectListbox.ascx.cs">
+      <DependentUpon>ARUIObjectListbox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIObjectProperty.ascx.cs">
+      <DependentUpon>ARUIObjectProperty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIObjectSelector.ascx.cs">
+      <DependentUpon>ARUIObjectSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOrgUnitDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIOrgUnitDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOrgUnitList.ascx.cs">
+      <DependentUpon>ARUIOrgUnitList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOrgUnitMenu.ascx.cs">
+      <DependentUpon>ARUIOrgUnitMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOrgUnitNew.ascx.cs">
+      <DependentUpon>ARUIOrgUnitNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOwnerDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIOwnerDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOwnerDropDownList.ascx.cs">
+      <DependentUpon>ARUIOwnerDropDownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOwnerList.ascx.cs">
+      <DependentUpon>ARUIOwnerList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOwnerMemberDetails.ascx.cs">
+      <DependentUpon>ARUIOwnerMemberDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOwnerMenu.ascx.cs">
+      <DependentUpon>ARUIOwnerMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIOwnerNew.ascx.cs">
+      <DependentUpon>ARUIOwnerNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPageControl.ascx.cs">
+      <DependentUpon>ARUIPageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPageModal.ascx.cs">
+      <DependentUpon>ARUIPageModal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPermissionDetails.ascx.cs">
+      <DependentUpon>ARUIPermissionDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPermissionMatrix.ascx.cs">
+      <DependentUpon>ARUIPermissionMatrix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPermissionTypeDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIPermissionTypeDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPermissionTypeList.ascx.cs">
+      <DependentUpon>ARUIPermissionTypeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPermissionTypeMenu.ascx.cs">
+      <DependentUpon>ARUIPermissionTypeMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIPermissionTypeNew.ascx.cs">
+      <DependentUpon>ARUIPermissionTypeNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIProperties.ascx.cs">
+      <DependentUpon>ARUIProperties.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIRegistrationForm.ascx.cs">
+      <DependentUpon>ARUIRegistrationForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIRelationshipValidity.ascx.cs">
+      <DependentUpon>ARUIRelationshipValidity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIRoleDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIRoleDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIRoleList.ascx.cs">
+      <DependentUpon>ARUIRoleList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIRoleMenu.ascx.cs">
+      <DependentUpon>ARUIRoleMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIRoleNew.ascx.cs">
+      <DependentUpon>ARUIRoleNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISaveScroll.ascx.cs">
+      <DependentUpon>ARUISaveScroll.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISchemaProperties.ascx.cs">
+      <DependentUpon>ARUISchemaProperties.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISchemaPropertyDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUISchemaPropertyDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISchemaPropertyDetailsMenu.ascx.cs">
+      <DependentUpon>ARUISchemaPropertyDetailsMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISchemaPropertyNew.ascx.cs">
+      <DependentUpon>ARUISchemaPropertyNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISendPassword.ascx.cs">
+      <DependentUpon>ARUISendPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISetPassword.ascx.cs">
+      <DependentUpon>ARUISetPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUISignOut.ascx.cs">
+      <DependentUpon>ARUISignOut.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsAccount.ascx.cs">
+      <DependentUpon>ARUIUserDetailsAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsAddress.ascx.cs">
+      <DependentUpon>ARUIUserDetailsAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsCustomFields.ascx.cs">
+      <DependentUpon>ARUIUserDetailsCustomFields.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsGeneral.ascx.cs">
+      <DependentUpon>ARUIUserDetailsGeneral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsNotes.ascx.cs">
+      <DependentUpon>ARUIUserDetailsNotes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsOrganization.ascx.cs">
+      <DependentUpon>ARUIUserDetailsOrganization.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsPassword.ascx.cs">
+      <DependentUpon>ARUIUserDetailsPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDetailsPhones.ascx.cs">
+      <DependentUpon>ARUIUserDetailsPhones.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserDropDownList.ascx.cs">
+      <DependentUpon>ARUIUserDropDownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserList.ascx.cs">
+      <DependentUpon>ARUIUserList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserMenu.ascx.cs">
+      <DependentUpon>ARUIUserMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserNew.ascx.cs">
+      <DependentUpon>ARUIUserNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Modules\ARUIUserSelection.ascx.cs">
+      <DependentUpon>ARUIUserSelection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\MyAdministration.aspx.cs">
+      <DependentUpon>MyAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\MyNamespaceSupportForCSharp.cs" />
+    <Compile Include="UserManagement\MySettings.aspx.cs">
+      <DependentUpon>MySettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ObjectDetailsValidity.aspx.cs">
+      <DependentUpon>ObjectDetailsValidity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ObjectProperty.aspx.cs">
+      <DependentUpon>ObjectProperty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ObjectSelector.aspx.cs">
+      <DependentUpon>ObjectSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ObjectSelectorObjectList.aspx.cs">
+      <DependentUpon>ObjectSelectorObjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ObjectSelectorObjectTree.aspx.cs">
+      <DependentUpon>ObjectSelectorObjectTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OrgUnitDetailsGeneral.aspx.cs">
+      <DependentUpon>OrgUnitDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OrgUnitList.aspx.cs">
+      <DependentUpon>OrgUnitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OrgUnitMenu.aspx.cs">
+      <DependentUpon>OrgUnitMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OrgUnitNew.aspx.cs">
+      <DependentUpon>OrgUnitNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OwnerDetailsGeneral.aspx.cs">
+      <DependentUpon>OwnerDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OwnerList.aspx.cs">
+      <DependentUpon>OwnerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OwnerMemberDetails.aspx.cs">
+      <DependentUpon>OwnerMemberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OwnerMembers.aspx.cs">
+      <DependentUpon>OwnerMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OwnerMenu.aspx.cs">
+      <DependentUpon>OwnerMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\OwnerNew.aspx.cs">
+      <DependentUpon>OwnerNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\PermissionDetails.aspx.cs">
+      <DependentUpon>PermissionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\PermissionMatrix.aspx.cs">
+      <DependentUpon>PermissionMatrix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\PermissionTypeDetailsGeneral.aspx.cs">
+      <DependentUpon>PermissionTypeDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\PermissionTypeList.aspx.cs">
+      <DependentUpon>PermissionTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\PermissionTypeMenu.aspx.cs">
+      <DependentUpon>PermissionTypeMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\PermissionTypeNew.aspx.cs">
+      <DependentUpon>PermissionTypeNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ProtectedAreaDetailsGeneral.aspx.cs">
+      <DependentUpon>ProtectedAreaDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ProtectedAreaList.aspx.cs">
+      <DependentUpon>ProtectedAreaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ProtectedAreaMenu.aspx.cs">
+      <DependentUpon>ProtectedAreaMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ProtectedAreaNew.aspx.cs">
+      <DependentUpon>ProtectedAreaNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\RelationshipValidity.aspx.cs">
+      <DependentUpon>RelationshipValidity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\RoleDetailsGeneral.aspx.cs">
+      <DependentUpon>RoleDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\RoleMenu.aspx.cs">
+      <DependentUpon>RoleMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\RoleNew.aspx.cs">
+      <DependentUpon>RoleNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\SchemaAbout.aspx.cs">
+      <DependentUpon>SchemaAbout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\SchemaList.aspx.cs">
+      <DependentUpon>SchemaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\SchemaPropertyDetailsGeneral.aspx.cs">
+      <DependentUpon>SchemaPropertyDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\SchemaPropertyDetailsMenu.aspx.cs">
+      <DependentUpon>SchemaPropertyDetailsMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\SchemaPropertyNew.aspx.cs">
+      <DependentUpon>SchemaPropertyNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsAccount.aspx.cs">
+      <DependentUpon>UserDetailsAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsAddress.aspx.cs">
+      <DependentUpon>UserDetailsAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsCustomFields.aspx.cs">
+      <DependentUpon>UserDetailsCustomFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsGeneral.aspx.cs">
+      <DependentUpon>UserDetailsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsNotes.aspx.cs">
+      <DependentUpon>UserDetailsNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsOrganization.aspx.cs">
+      <DependentUpon>UserDetailsOrganization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsPassword.aspx.cs">
+      <DependentUpon>UserDetailsPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsPhones.aspx.cs">
+      <DependentUpon>UserDetailsPhones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserDetailsSettings.aspx.cs">
+      <DependentUpon>UserDetailsSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserMenu.aspx.cs">
+      <DependentUpon>UserMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UserNew.aspx.cs">
+      <DependentUpon>UserNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceManager.cs">
+      <DependentUpon>FinanceManager.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManager.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinanceManager.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerCache.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinanceManagerCache.sync</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinanceManagerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinanceManagerDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManagerDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinanceManagerDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ImageDisplay.ashx.cs">
+      <DependentUpon>ImageDisplay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MemberDetails.aspx.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MemberDetails.aspx.designer.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Members.aspx.cs">
+      <DependentUpon>Members.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Members.aspx.designer.cs">
+      <DependentUpon>Members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LoanDefaults.aspx.cs">
+      <DependentUpon>LoanDefaults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LoanDefaults.aspx.designer.cs">
+      <DependentUpon>LoanDefaults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogoHandler.ashx.cs">
+      <DependentUpon>LogoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="admin\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ResponseHelper.cs" />
+    <Compile Include="SearchResultComplexType.cs" />
+    <Compile Include="Setups\IdentityTypes.aspx.cs">
+      <DependentUpon>IdentityTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setups\IdentityTypes.aspx.designer.cs">
+      <DependentUpon>IdentityTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sevices\FinanceManagerWebService.asmx.cs">
+      <DependentUpon>FinanceManagerWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DateWebUserControl.ascx.cs">
+      <DependentUpon>DateWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DateWebUserControl.ascx.designer.cs">
+      <DependentUpon>DateWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FixedDepositInvestmentToolBarWebUserControl.ascx.cs">
+      <DependentUpon>FixedDepositInvestmentToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FixedDepositInvestmentToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>FixedDepositInvestmentToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PaymentMethodWebUserControl.ascx.cs">
+      <DependentUpon>PaymentMethodWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PaymentMethodWebUserControl.ascx.designer.cs">
+      <DependentUpon>PaymentMethodWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SUSUInvestmentToolBarWebUserControl.ascx.cs">
+      <DependentUpon>SUSUInvestmentToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SUSUInvestmentToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>SUSUInvestmentToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UsersToolBarWebUserControl.ascx.cs">
+      <DependentUpon>UsersToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UsersToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>UsersToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupInvestmentToolBarWebUserControl.ascx.cs">
+      <DependentUpon>GroupInvestmentToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupInvestmentToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>GroupInvestmentToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupLoansToolBarWebUserControl.ascx.cs">
+      <DependentUpon>GroupLoansToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupLoansToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>GroupLoansToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupToolBarWebUserControl.ascx.cs">
+      <DependentUpon>GroupToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>GroupToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberToolBarWebUserControl.ascx.cs">
+      <DependentUpon>MemberToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>MemberToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoansToolBarWebUserControl.ascx.cs">
+      <DependentUpon>LoansToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoansToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>LoansToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InvestmentToolBarWebUserControl.ascx.cs">
+      <DependentUpon>InvestmentToolBarWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\InvestmentToolBarWebUserControl.ascx.designer.cs">
+      <DependentUpon>InvestmentToolBarWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement_old\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement_old\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement_old\PasswordSuccessfullyChanged.aspx.cs">
+      <DependentUpon>PasswordSuccessfullyChanged.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement_old\PasswordSuccessfullyChanged.aspx.designer.cs">
+      <DependentUpon>PasswordSuccessfullyChanged.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement_old\UsersAdminEdit.aspx.cs">
+      <DependentUpon>UsersAdminEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement_old\UsersAdminEdit.aspx.designer.cs">
+      <DependentUpon>UsersAdminEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement_old\UsersList.aspx.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement_old\UsersList.aspx.designer.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement_old\UsersAdmin.aspx.cs">
+      <DependentUpon>UsersAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement_old\UsersAdmin.aspx.designer.cs">
+      <DependentUpon>UsersAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="admin\Withdrawal.aspx.cs">
+      <DependentUpon>Withdrawal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Withdrawal.aspx.designer.cs">
+      <DependentUpon>Withdrawal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserManagement\bin\" />
+    <Folder Include="UserManagement\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="admin\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\ImageDisplay.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\DefaultPageSite.Master" />
+    <Content Include="admin\web.config" />
+    <Content Include="admin\SignatureImageDisplay.ashx" />
+    <Content Include="admin\IDPhotoImageDisplay.ashx" />
+    <Content Include="noMenu.Master" />
+    <Content Include="admin\MobileBankerImageDisplay.ashx" />
+    <None Include="UserManagement\HelpFiles\icons\Thumbs.db" />
+    <None Include="UserManagement\HelpFiles\images\Sav11D9.tmp" />
+    <None Include="UserManagement\HelpFiles\stylesheets\helpstudio.css.bak" />
+    <Content Include="UserManagement\Web.config" />
+    <None Include="FinanceManager.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FinanceManager.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Site.Master" />
+    <None Include="FinanceManagerCache.sync">
+      <Generator>MSDataSyncGenerator</Generator>
+      <LastGenOutput>FinanceManagerCache.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinanceManagerDataSet.xsc">
+      <DependentUpon>FinanceManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FinanceManagerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinanceManagerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinanceManagerDataSet.xss">
+      <DependentUpon>FinanceManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FinanceManagerDataSet1.xsc">
+      <DependentUpon>FinanceManagerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FinanceManagerDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinanceManagerDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinanceManagerDataSet1.xss">
+      <DependentUpon>FinanceManagerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FinanceManagerDataSet2.xsc">
+      <DependentUpon>FinanceManagerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FinanceManagerDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinanceManagerDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinanceManagerDataSet2.xss">
+      <DependentUpon>FinanceManagerDataSet2.xsd</DependentUpon>
+    </None>
+    <Content Include="LogoHandler.ashx" />
+    <None Include="images\Open Notebook.onetoc2" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="UserManagement_old\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FinanceManager.dbml.layout">
+      <DependentUpon>FinanceManager.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="admin\Report1.rdlc" />
+    <EmbeddedResource Include="Reports\BoG\rptLoansDisbursed_Top20.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedInterestsAndDeductionsSummary.rdlc" />
+    <EmbeddedResource Include="Reports\rptInvTransactions_Imperial_Trust_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptCustomerStatement_Investment_Imperial_Trust.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedFeatureDetailsType1_sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedDeductionForStatement_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedDeductionReportForPrint.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedFeatureDetailsType1.rdlc" />
+    <EmbeddedResource Include="Reports\rptCompanyProfileSimple_BoG.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LoanStatement_Group.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BoG\rptInvestments_TopTen.rdlc" />
+    <EmbeddedResource Include="Reports\rptCustomerStatement_Investment_new_Type2.rdlc" />
+    <EmbeddedResource Include="Reports\rptInvestmentTransactions_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptCustomerStatement_Investment_new.rdlc" />
+    <EmbeddedResource Include="UserManagement\AccessDenied.aspx.resx">
+      <DependentUpon>AccessDenied.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationDetailsGeneral.aspx.resx">
+      <DependentUpon>ApplicationDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationList.aspx.resx">
+      <DependentUpon>ApplicationList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationMenu.aspx.resx">
+      <DependentUpon>ApplicationMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationNew.aspx.resx">
+      <DependentUpon>ApplicationNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationPartDetailsGeneral.aspx.resx">
+      <DependentUpon>ApplicationPartDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationPartList.aspx.resx">
+      <DependentUpon>ApplicationPartList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationPartMenu.aspx.resx">
+      <DependentUpon>ApplicationPartMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ApplicationPartNew.aspx.resx">
+      <DependentUpon>ApplicationPartNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ARTree.aspx.resx">
+      <DependentUpon>ARTree.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\AuditLogList.aspx.resx">
+      <DependentUpon>AuditLogList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\CatalogMenu.aspx.resx">
+      <DependentUpon>CatalogMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\CatalogOverview.aspx.resx">
+      <DependentUpon>CatalogOverview.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\DateTimeDialog.aspx.resx">
+      <DependentUpon>DateTimeDialog.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\default.aspx.resx">
+      <DependentUpon>default.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Default2.aspx.resx">
+      <DependentUpon>Default2.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\DelegatedAdmins.aspx.resx">
+      <DependentUpon>DelegatedAdmins.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\DelegatedUsers.aspx.resx">
+      <DependentUpon>DelegatedUsers.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\GroupDetailsGeneral.aspx.resx">
+      <DependentUpon>GroupDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\GroupList.aspx.resx">
+      <DependentUpon>GroupList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\GroupMenu.aspx.resx">
+      <DependentUpon>GroupMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\GroupNew.aspx.resx">
+      <DependentUpon>GroupNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\header.aspx.resx">
+      <DependentUpon>header.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Help.aspx.resx">
+      <DependentUpon>Help.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\HelpContentFrameset.aspx.resx">
+      <DependentUpon>HelpContentFrameset.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\HelpHeader.aspx.resx">
+      <DependentUpon>HelpHeader.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\InFrame.aspx.resx">
+      <DependentUpon>InFrame.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\LogonForm.aspx.resx">
+      <DependentUpon>LogonForm.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\MembershipMemberOf.aspx.resx">
+      <DependentUpon>MembershipMemberOf.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\MembershipMembers.aspx.resx">
+      <DependentUpon>MembershipMembers.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARTreeControl.ascx.resx">
+      <DependentUpon>ARTreeControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARTreeOU.ascx.resx">
+      <DependentUpon>ARTreeOU.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIApplicationDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationList.ascx.resx">
+      <DependentUpon>ARUIApplicationList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationMenu.ascx.resx">
+      <DependentUpon>ARUIApplicationMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationNew.ascx.resx">
+      <DependentUpon>ARUIApplicationNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationPartDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIApplicationPartDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationPartList.ascx.resx">
+      <DependentUpon>ARUIApplicationPartList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationPartMenu.ascx.resx">
+      <DependentUpon>ARUIApplicationPartMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIApplicationPartNew.ascx.resx">
+      <DependentUpon>ARUIApplicationPartNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIAuditLogList.ascx.resx">
+      <DependentUpon>ARUIAuditLogList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUICatalogMenu.ascx.resx">
+      <DependentUpon>ARUICatalogMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUICatalogOverview.ascx.resx">
+      <DependentUpon>ARUICatalogOverview.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIDelegatedAdmins.ascx.resx">
+      <DependentUpon>ARUIDelegatedAdmins.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIDelegatedUsers.ascx.resx">
+      <DependentUpon>ARUIDelegatedUsers.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIGroupDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIGroupDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIGroupList.ascx.resx">
+      <DependentUpon>ARUIGroupList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIGroupMenu.ascx.resx">
+      <DependentUpon>ARUIGroupMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIGroupNew.ascx.resx">
+      <DependentUpon>ARUIGroupNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIHelpIcon.ascx.resx">
+      <DependentUpon>ARUIHelpIcon.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIMembershipMemberOf.ascx.resx">
+      <DependentUpon>ARUIMembershipMemberOf.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIMembershipMembers.ascx.resx">
+      <DependentUpon>ARUIMembershipMembers.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIMembershipOwners.ascx.resx">
+      <DependentUpon>ARUIMembershipOwners.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIMenuControl.ascx.resx">
+      <DependentUpon>ARUIMenuControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIMyAdministration.ascx.resx">
+      <DependentUpon>ARUIMyAdministration.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIMySettings.ascx.resx">
+      <DependentUpon>ARUIMySettings.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIObjectDetailsValidity.ascx.resx">
+      <DependentUpon>ARUIObjectDetailsValidity.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIObjectListbox.ascx.resx">
+      <DependentUpon>ARUIObjectListbox.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIObjectProperty.ascx.resx">
+      <DependentUpon>ARUIObjectProperty.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIObjectSelector.ascx.resx">
+      <DependentUpon>ARUIObjectSelector.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOrgUnitDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIOrgUnitDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOrgUnitList.ascx.resx">
+      <DependentUpon>ARUIOrgUnitList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOrgUnitMenu.ascx.resx">
+      <DependentUpon>ARUIOrgUnitMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOrgUnitNew.ascx.resx">
+      <DependentUpon>ARUIOrgUnitNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOwnerDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIOwnerDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOwnerDropDownList.ascx.resx">
+      <DependentUpon>ARUIOwnerDropDownList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOwnerList.ascx.resx">
+      <DependentUpon>ARUIOwnerList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOwnerMemberDetails.ascx.resx">
+      <DependentUpon>ARUIOwnerMemberDetails.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOwnerMenu.ascx.resx">
+      <DependentUpon>ARUIOwnerMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIOwnerNew.ascx.resx">
+      <DependentUpon>ARUIOwnerNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPageControl.ascx.resx">
+      <DependentUpon>ARUIPageControl.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPageModal.ascx.resx">
+      <DependentUpon>ARUIPageModal.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPermissionDetails.ascx.resx">
+      <DependentUpon>ARUIPermissionDetails.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPermissionMatrix.ascx.resx">
+      <DependentUpon>ARUIPermissionMatrix.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPermissionTypeDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIPermissionTypeDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPermissionTypeList.ascx.resx">
+      <DependentUpon>ARUIPermissionTypeList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPermissionTypeMenu.ascx.resx">
+      <DependentUpon>ARUIPermissionTypeMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIPermissionTypeNew.ascx.resx">
+      <DependentUpon>ARUIPermissionTypeNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIProperties.ascx.resx">
+      <DependentUpon>ARUIProperties.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIRegistrationForm.ascx.resx">
+      <DependentUpon>ARUIRegistrationForm.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIRelationshipValidity.ascx.resx">
+      <DependentUpon>ARUIRelationshipValidity.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIRoleDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIRoleDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIRoleList.ascx.resx">
+      <DependentUpon>ARUIRoleList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIRoleMenu.ascx.resx">
+      <DependentUpon>ARUIRoleMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIRoleNew.ascx.resx">
+      <DependentUpon>ARUIRoleNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISaveScroll.ascx.resx">
+      <DependentUpon>ARUISaveScroll.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISchemaProperties.ascx.resx">
+      <DependentUpon>ARUISchemaProperties.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISchemaPropertyDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUISchemaPropertyDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISchemaPropertyDetailsMenu.ascx.resx">
+      <DependentUpon>ARUISchemaPropertyDetailsMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISchemaPropertyNew.ascx.resx">
+      <DependentUpon>ARUISchemaPropertyNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISendPassword.ascx.resx">
+      <DependentUpon>ARUISendPassword.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISetPassword.ascx.resx">
+      <DependentUpon>ARUISetPassword.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUISignOut.ascx.resx">
+      <DependentUpon>ARUISignOut.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsAccount.ascx.resx">
+      <DependentUpon>ARUIUserDetailsAccount.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsAddress.ascx.resx">
+      <DependentUpon>ARUIUserDetailsAddress.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsCustomFields.ascx.resx">
+      <DependentUpon>ARUIUserDetailsCustomFields.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsGeneral.ascx.resx">
+      <DependentUpon>ARUIUserDetailsGeneral.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsNotes.ascx.resx">
+      <DependentUpon>ARUIUserDetailsNotes.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsOrganization.ascx.resx">
+      <DependentUpon>ARUIUserDetailsOrganization.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsPassword.ascx.resx">
+      <DependentUpon>ARUIUserDetailsPassword.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDetailsPhones.ascx.resx">
+      <DependentUpon>ARUIUserDetailsPhones.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserDropDownList.ascx.resx">
+      <DependentUpon>ARUIUserDropDownList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserList.ascx.resx">
+      <DependentUpon>ARUIUserList.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserMenu.ascx.resx">
+      <DependentUpon>ARUIUserMenu.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserNew.ascx.resx">
+      <DependentUpon>ARUIUserNew.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Modules\ARUIUserSelection.ascx.resx">
+      <DependentUpon>ARUIUserSelection.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\MyAdministration.aspx.resx">
+      <DependentUpon>MyAdministration.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\MySettings.aspx.resx">
+      <DependentUpon>MySettings.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ObjectDetailsValidity.aspx.resx">
+      <DependentUpon>ObjectDetailsValidity.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ObjectProperty.aspx.resx">
+      <DependentUpon>ObjectProperty.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ObjectSelector.aspx.resx">
+      <DependentUpon>ObjectSelector.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ObjectSelectorObjectList.aspx.resx">
+      <DependentUpon>ObjectSelectorObjectList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ObjectSelectorObjectTree.aspx.resx">
+      <DependentUpon>ObjectSelectorObjectTree.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OrgUnitDetailsGeneral.aspx.resx">
+      <DependentUpon>OrgUnitDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OrgUnitList.aspx.resx">
+      <DependentUpon>OrgUnitList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OrgUnitMenu.aspx.resx">
+      <DependentUpon>OrgUnitMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OrgUnitNew.aspx.resx">
+      <DependentUpon>OrgUnitNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OwnerDetailsGeneral.aspx.resx">
+      <DependentUpon>OwnerDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OwnerList.aspx.resx">
+      <DependentUpon>OwnerList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OwnerMemberDetails.aspx.resx">
+      <DependentUpon>OwnerMemberDetails.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OwnerMembers.aspx.resx">
+      <DependentUpon>OwnerMembers.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OwnerMenu.aspx.resx">
+      <DependentUpon>OwnerMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\OwnerNew.aspx.resx">
+      <DependentUpon>OwnerNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\PermissionDetails.aspx.resx">
+      <DependentUpon>PermissionDetails.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\PermissionMatrix.aspx.resx">
+      <DependentUpon>PermissionMatrix.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\PermissionTypeDetailsGeneral.aspx.resx">
+      <DependentUpon>PermissionTypeDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\PermissionTypeList.aspx.resx">
+      <DependentUpon>PermissionTypeList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\PermissionTypeMenu.aspx.resx">
+      <DependentUpon>PermissionTypeMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\PermissionTypeNew.aspx.resx">
+      <DependentUpon>PermissionTypeNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\RelationshipValidity.aspx.resx">
+      <DependentUpon>RelationshipValidity.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\RoleDetailsGeneral.aspx.resx">
+      <DependentUpon>RoleDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\RoleList.aspx.resx">
+      <DependentUpon>RoleList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\RoleMenu.aspx.resx">
+      <DependentUpon>RoleMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\RoleNew.aspx.resx">
+      <DependentUpon>RoleNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\SchemaAbout.aspx.resx">
+      <DependentUpon>SchemaAbout.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\SchemaList.aspx.resx">
+      <DependentUpon>SchemaList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\SchemaPropertyDetailsGeneral.aspx.resx">
+      <DependentUpon>SchemaPropertyDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\SchemaPropertyDetailsMenu.aspx.resx">
+      <DependentUpon>SchemaPropertyDetailsMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\SchemaPropertyNew.aspx.resx">
+      <DependentUpon>SchemaPropertyNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\strings.resx" />
+    <EmbeddedResource Include="UserManagement\UserDetailsAccount.aspx.resx">
+      <DependentUpon>UserDetailsAccount.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsAddress.aspx.resx">
+      <DependentUpon>UserDetailsAddress.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsCustomFields.aspx.resx">
+      <DependentUpon>UserDetailsCustomFields.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsGeneral.aspx.resx">
+      <DependentUpon>UserDetailsGeneral.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsNotes.aspx.resx">
+      <DependentUpon>UserDetailsNotes.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsOrganization.aspx.resx">
+      <DependentUpon>UserDetailsOrganization.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsPassword.aspx.resx">
+      <DependentUpon>UserDetailsPassword.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsPhones.aspx.resx">
+      <DependentUpon>UserDetailsPhones.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserDetailsSettings.aspx.resx">
+      <DependentUpon>UserDetailsSettings.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserList.aspx.resx">
+      <DependentUpon>UserList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserMenu.aspx.resx">
+      <DependentUpon>UserMenu.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UserNew.aspx.resx">
+      <DependentUpon>UserNew.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ContibutionStatement.rdlc" />
+    <EmbeddedResource Include="Reports\ContributionSchedule.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCashRecievedSummary.rdlc" />
+    <EmbeddedResource Include="Reports\rptCashDisbursedSummary.rdlc" />
+    <EmbeddedResource Include="Reports\rptWithdrawalByMobileBanker_sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptWithdrawalByMobileBanker.rdlc" />
+    <EmbeddedResource Include="Reports\rptCashCollectionReport.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedInvestmentForStatement_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedInteretReportForPrint.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedForPrint.rdlc" />
+    <EmbeddedResource Include="Reports\rptAppliedInterestByDateRangeAndAccountType.rdlc" />
+    <EmbeddedResource Include="Reports\rptContributionsByMobileBanker.rdlc" />
+    <EmbeddedResource Include="Reports\rptContributionsByMobileBanker_sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptInvestments_WithInvestmentDescription.rdlc" />
+    <EmbeddedResource Include="Reports\rptInvestments_WithInvestmentDescription_sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptInvestments_WithInvestmentDescription_old.rdlc" />
+    <EmbeddedResource Include="Reports\rptLoansDisbursed_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\SUSUContributionReceipt_Group.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptLoanRepayments.rdlc" />
+    <EmbeddedResource Include="Reports\SUSUContributionReceipt.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ContributionReceipt_Group.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ContributionReceipt.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptFixedDepositInvestment.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCustomerStatement_Investment.rdlc" />
+    <EmbeddedResource Include="Reports\rptCustomerStatement_Loan.rdlc" />
+    <EmbeddedResource Include="Reports\rptLoanStatementHeader_subreport.rdlc" />
+    <EmbeddedResource Include="Reports\rptMaturedInvestments.rdlc" />
+    <EmbeddedResource Include="Reports\LoanRepaymentReceipt_Group.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptInvestmentWithdrawals_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Reports\rptCustomerStatement.rdlc" />
+    <EmbeddedResource Include="Reports\rptInvestmentContributions_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptLoanRepayments_Sub.rdlc" />
+    <EmbeddedResource Include="Reports\rptOverDueLoans.rdlc" />
+    <EmbeddedResource Include="Reports\rptWithdrawals.rdlc" />
+    <EmbeddedResource Include="Reports\rptContributions.rdlc" />
+    <EmbeddedResource Include="Reports\rptInvestments.rdlc" />
+    <EmbeddedResource Include="Reports\rptLoansDisbursed.rdlc" />
+    <EmbeddedResource Include="Reports\SUSUInvestmentStatement.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LoanRepaymentReceipt.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LoanSchedule_Group.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LoanSchedule.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LoanStatement.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCompanyProfile.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCompanyProfileSimple.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1320</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

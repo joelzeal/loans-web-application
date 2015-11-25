@@ -1,0 +1,149 @@
+﻿1.	General data entry
+a.	Corrections cannot be made to wrong entries
+b.	Initial deposit does not reflect on customer balance sheet and homepage
+c.	The signature and id card as well as photograph for customers should reflect on the deposit and withdrawal page
+
+2.	Date
+a.	Date cannot be adjusted on the deposit or withdrawals made 
+b.	Name of data entry clerk does not reflect on transaction sheet
+
+3.	Loan 
+a.	Loan recovery does not show up on homepage
+b.	Loan repaid does not add up to cash collection report
+c.	Name of loan officer should be associated with client 
+d.	Arrangement on loan schedule and loan recovery report should appear in this order: principal amount, interest amount, expected total amount.
+
+4.	--Bio-data
+a.	--Name of next of kin should appear
+b.	--Phone number of contact person
+
+
+
+==================================
+Show logo on Receipt
+Check loan penalty calculation
+
+Make Audit trail log both original and current values of the object on edit action\
+
+
+TODO
+======
+Test edit implementation on investment individual and member.
+Implement edit on repayments, Contributions and loans
+--Done edit of investment for individual members...Implementing the same for group investments
+
+
+Show loan type on repayments report.
+ 
+
+
+
+ was working on Apply interest to Current and Savings Accounts
+ --Show interest calculated on customers statement
+ --Add interest calculation the customer's totalBalance - update the stored procedure to reflect this.
+ --All the balances
+
+ Posible Applied Interest Reports
+ --applied Interest History report Grouped by the Member and the by Investment
+
+
+ Acccount Type on member Details page throwing errors
+
+ Add groups to the loaded customers on the applied interest list.
+--U can create a stored procedure that does a union. 
+
+
+Testing observations
+--------------------
+			1. http://localhost:9938/admin/NewInvestment_MemberPreSelected.aspx?gid=15
+			doesn't pass the groupId
+
+			2.The balance on the GroupInvestments.aspx for regular investments should include the applied 
+			interest amount
+
+			3.Group Contribution Add the contribution date field to the controls
+			4.Show the company logo on the receipts
+			5.The navigation Icons on the top right coner must be for groups.
+6.Create a general error page
+			7.Group investment contribution. Must set IsDeleted to False
+			8. AppliedInterestForPrintReport.aspx. Remove the date range
+			9.Applied interest. If nothing is selected, dont do anything. Or probably print an error message
+10.Add per annum to the interest on the report
+11. NewInvestment_MemberPreSelected.aspx investment amount does not allow for decimals. Invalid number validation error thrown
+
+
+12.Contribution Receipt group should not display self - Not a problem. Payer's name must be stated.
+13.Different receipt for payment in cheque
+
+14. Remove balance on search
+
+
+
+
+
+Issues From Operations After last visit(After Importation Done)
+---------------------------------------------------------------
+++decimal points for deposits showing 4 decimal Places
+--Deposits not showing on the front page.
+--Some employees dont have investments
+--Date on the receipt -- deposit wrong
+
+--After a loan is created it does not show under the member's loans
+
+--Deposit date wrong
+--Sort customers under record cash collection for mobile bankers by customeName or AccountNumber
+When contribution is made even thru the normal process.
+
+Deleted items still show at some places
+Principal field rejects numbers
+
+
+
+
+
+
+Obaatanpa Issues
+---------------- ---------
+-----------------1.Withdrawal  summary report not showing summaries . It is showing individual details instead.
+
+--2.Reports, when a single day is selected doesn't load appropriate data.
+
+3.Loan disbursed report not showing total.
+
+4.Loan repayment showing today 's date even if a different date is selected.
+
+5.Withdrawal page - Show date control.
+
+
+
+
+
+Format="dd-MM-yyyy"
+
+New Issues found -- 25-june-2013
+Group - Loans .....allows group to take another loan even if they haven't finished paying up an existing loan
+
+General
+-------
+What happens if a loan has been fully repayed. -- Test it.
+
+
+On new Guarantor page...Date picker not added. Add it
+
+
+
+Bank of ghana reports
+----------------------
+1.  MF7c
+2. MF7B
+3. MF7
+4. MF6 with explanation
+5. MF3 With explanation
+6. Schedule F
+7. Schedule E if the money given out to customers
+8. Schedule C
+
+
+
+Removed Investment Type 2 Report because investment descriptions are not used anymore since 
+everyCustomer has exactly one account now.

@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2ef866c8-7e71-493c-9cab-36fe1b817293" name="ZeaL@BAZAB-PC 2012-11-19 05:39:53" runUser="Bazab-PC\ZeaL" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1d53709a-fb61-4085-9153-03106d7a685a">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="ZeaL_BAZAB-PC 2012-11-19 05_39_53">
+      <DeploymentItem filename="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\LoanWebApplication4.dll" />
+      <DeploymentItem filename="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\bin\ajaxcontroltoolkit.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-11-19T05:39:53.2795457+00:00" queuing="2012-11-19T05:39:56.6707396+00:00" start="2012-11-19T05:39:57.2517729+00:00" finish="2012-11-19T05:40:16.0228465+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="18" executed="18" error="0" failed="16" timeout="0" aborted="0" inconclusive="2" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GenerateAccountNumberTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="cce72469-a327-54f1-1fa0-8f9bc87506c1">
+      <Execution id="49f6ec8a-c465-4c23-8f9f-76cd3a3dbe64" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GenerateAccountNumberTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="calculatePenaltyForEachLoanTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="6f38b552-2b46-004d-e2d9-d951b9235b1d">
+      <DeploymentItems>
+        <DeploymentItem filename="LoanWebApplication4.dll" />
+      </DeploymentItems>
+      <Execution id="338c7892-49c0-451d-8d46-885080cc9495" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculatePenaltyForEachLoanTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="SearchMemberTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="d2fa2d4e-5d3c-0262-492b-8da40554e35b">
+      <Execution id="012fbbb1-7033-44f5-b5e2-6b65ba9fd952" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SearchMemberTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="CalculateInterestRateByDurationTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="48960c16-741e-7609-e654-3af6817ca8e0">
+      <Execution id="6be88d90-2765-45c2-bd92-37c68446200f" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CalculateInterestRateByDurationTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="InterestTypeNameTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="6e1b24e0-d2a9-3a26-4d68-955e9294f030">
+      <Execution id="0ea29316-08eb-41cf-83cb-ca8b608ae61a" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InterestTypeNameTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="GenerateRepaymentScheduleTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="c1c7ad23-43c8-a60e-880b-13ecf6f39e01">
+      <Execution id="34556376-8eed-418c-a789-92b2265cbbce" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GenerateRepaymentScheduleTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="LoanStatusTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="9774f582-d207-7045-ad0c-ea83d875cc6c">
+      <Execution id="af43d3ae-fcdf-4038-a13b-5fb87c15e29e" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LoanStatusTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="GenerateRepaymentSchedule_newTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="58cce904-9828-6476-faa3-66e34598f25e">
+      <Execution id="5af87c55-1724-4f7c-9f21-87b76110e17c" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GenerateRepaymentSchedule_newTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="CalculateDefaultersInterestTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="60c57dce-92d2-28df-c6f7-0bb9f6f3f651">
+      <Execution id="7e841eb4-652a-457e-962a-56137c4c6d70" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CalculateDefaultersInterestTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="IdentityTypeTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="233cd726-cbac-450f-ade7-5858b505d59f">
+      <Execution id="6e611994-a06b-4f92-a127-3eaa75815e2a" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IdentityTypeTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="RepaymentFreqNameTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="4550c9f7-b77c-4544-4b72-7c55b75ed06f">
+      <Execution id="974b453f-aee4-4b9b-906f-003bd0f6d828" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RepaymentFreqNameTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="HundredsTextTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="b3eaa710-3326-3190-ba34-09584c654d6a">
+      <DeploymentItems>
+        <DeploymentItem filename="LoanWebApplication4.dll" />
+      </DeploymentItems>
+      <Execution id="39b63361-e8af-4204-b92a-c548891d1cab" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="HundredsTextTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="calculateSimpleInterestTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="61726521-db52-f12b-9b12-5cff157d2214">
+      <Execution id="0d70957e-52db-4f4b-a613-5861115ff9ff" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculateSimpleInterestTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="GetDataContextTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="7b9879d0-8d5c-c42d-1c24-3c888980cae0">
+      <Execution id="68853b8c-87bb-4deb-90a5-1325048f39f4" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetDataContextTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="GetCompoundTypeTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="03ab3a92-6c58-c9e5-e0fc-e44adc8f0fa3">
+      <Execution id="911d9440-dc5b-4b03-9eba-7d97258c78f2" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetCompoundTypeTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="calculateCompoundInterestTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="dc4bbeeb-362f-1171-dd02-824975d30242">
+      <Execution id="5348e6c1-7d65-4823-93da-38a98645a2ea" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculateCompoundInterestTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="ConvertMoneyToTextTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="7a1e51bf-38c8-9fb4-f375-edf00735442e">
+      <Execution id="6b2cc89c-4cd9-4788-a927-6c24a0f84fe2" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConvertMoneyToTextTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="GenerateContributionScheduleTest" storage="c:\users\zeal\desktop\zeal v2\zeal\project\loanwebapplication4\financemanagertestproject\bin\debug\financemanagertestproject.dll" id="02894283-7803-dd7a-7ea3-3ba3d6a3562e">
+      <Execution id="9089788e-be3f-447d-a20a-f939ccd6ac2c" />
+      <TestMethod codeBase="C:/Users/ZeaL/Desktop/Zeal v2/Zeal/Project/LoanWebApplication4/FinanceManagerTestProject/bin/Debug/FinanceManagerTestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FinanceManagerTestProject.UtilsTest, FinanceManagerTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GenerateContributionScheduleTest" />
+      <AspNet webSiteUrl="http://localhost:1165/">
+        <Host pathToWebApp="C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="48960c16-741e-7609-e654-3af6817ca8e0" executionId="6be88d90-2765-45c2-bd92-37c68446200f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9774f582-d207-7045-ad0c-ea83d875cc6c" executionId="af43d3ae-fcdf-4038-a13b-5fb87c15e29e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e1b24e0-d2a9-3a26-4d68-955e9294f030" executionId="0ea29316-08eb-41cf-83cb-ca8b608ae61a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="233cd726-cbac-450f-ade7-5858b505d59f" executionId="6e611994-a06b-4f92-a127-3eaa75815e2a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7a1e51bf-38c8-9fb4-f375-edf00735442e" executionId="6b2cc89c-4cd9-4788-a927-6c24a0f84fe2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61726521-db52-f12b-9b12-5cff157d2214" executionId="0d70957e-52db-4f4b-a613-5861115ff9ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58cce904-9828-6476-faa3-66e34598f25e" executionId="5af87c55-1724-4f7c-9f21-87b76110e17c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="02894283-7803-dd7a-7ea3-3ba3d6a3562e" executionId="9089788e-be3f-447d-a20a-f939ccd6ac2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc4bbeeb-362f-1171-dd02-824975d30242" executionId="5348e6c1-7d65-4823-93da-38a98645a2ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4550c9f7-b77c-4544-4b72-7c55b75ed06f" executionId="974b453f-aee4-4b9b-906f-003bd0f6d828" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03ab3a92-6c58-c9e5-e0fc-e44adc8f0fa3" executionId="911d9440-dc5b-4b03-9eba-7d97258c78f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1c7ad23-43c8-a60e-880b-13ecf6f39e01" executionId="34556376-8eed-418c-a789-92b2265cbbce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d2fa2d4e-5d3c-0262-492b-8da40554e35b" executionId="012fbbb1-7033-44f5-b5e2-6b65ba9fd952" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3eaa710-3326-3190-ba34-09584c654d6a" executionId="39b63361-e8af-4204-b92a-c548891d1cab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b9879d0-8d5c-c42d-1c24-3c888980cae0" executionId="68853b8c-87bb-4deb-90a5-1325048f39f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cce72469-a327-54f1-1fa0-8f9bc87506c1" executionId="49f6ec8a-c465-4c23-8f9f-76cd3a3dbe64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60c57dce-92d2-28df-c6f7-0bb9f6f3f651" executionId="7e841eb4-652a-457e-962a-56137c4c6d70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f38b552-2b46-004d-e2d9-d951b9235b1d" executionId="338c7892-49c0-451d-8d46-885080cc9495" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="6be88d90-2765-45c2-bd92-37c68446200f" testId="48960c16-741e-7609-e654-3af6817ca8e0" testName="CalculateInterestRateByDurationTest" computerName="BAZAB-PC" duration="00:00:00.0177604" startTime="2012-11-19T05:39:58.3118335+00:00" endTime="2012-11-19T05:40:10.3495220+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6be88d90-2765-45c2-bd92-37c68446200f">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="af43d3ae-fcdf-4038-a13b-5fb87c15e29e" testId="9774f582-d207-7045-ad0c-ea83d875cc6c" testName="LoanStatusTest" computerName="BAZAB-PC" duration="00:00:00.0091624" startTime="2012-11-19T05:40:10.3805238+00:00" endTime="2012-11-19T05:40:10.5125314+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af43d3ae-fcdf-4038-a13b-5fb87c15e29e">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method FinanceManagerTestProject.UtilsTest.LoanStatusTest threw exception: 
+System.InvalidOperationException: Nullable object must have a value.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at Utils.LoanStatus(Nullable`1 isPaidUp) in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\Utils.cs:line 340
+   at FinanceManagerTestProject.UtilsTest.LoanStatusTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 317
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0ea29316-08eb-41cf-83cb-ca8b608ae61a" testId="6e1b24e0-d2a9-3a26-4d68-955e9294f030" testName="InterestTypeNameTest" computerName="BAZAB-PC" duration="00:00:00.0011671" startTime="2012-11-19T05:40:10.5275322+00:00" endTime="2012-11-19T05:40:10.6385386+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ea29316-08eb-41cf-83cb-ca8b608ae61a">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6e611994-a06b-4f92-a127-3eaa75815e2a" testId="233cd726-cbac-450f-ade7-5858b505d59f" testName="IdentityTypeTest" computerName="BAZAB-PC" duration="00:00:00.4811998" startTime="2012-11-19T05:40:10.6565396+00:00" endTime="2012-11-19T05:40:11.2655744+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e611994-a06b-4f92-a127-3eaa75815e2a">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method FinanceManagerTestProject.UtilsTest.IdentityTypeTest threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at Utils.IdentityType(Int32 idType) in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\Utils.cs:line 355
+   at FinanceManagerTestProject.UtilsTest.IdentityTypeTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 277
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6b2cc89c-4cd9-4788-a927-6c24a0f84fe2" testId="7a1e51bf-38c8-9fb4-f375-edf00735442e" testName="ConvertMoneyToTextTest" computerName="BAZAB-PC" duration="00:00:00.0096867" startTime="2012-11-19T05:40:11.5455904+00:00" endTime="2012-11-19T05:40:11.7906045+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b2cc89c-4cd9-4788-a927-6c24a0f84fe2">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d70957e-52db-4f4b-a613-5861115ff9ff" testId="61726521-db52-f12b-9b12-5cff157d2214" testName="calculateSimpleInterestTest" computerName="BAZAB-PC" duration="00:00:00.0025058" startTime="2012-11-19T05:40:11.8476077+00:00" endTime="2012-11-19T05:40:12.0826212+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d70957e-52db-4f4b-a613-5861115ff9ff">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. Verify the correctness of this test method.</Message>
+          <StackTrace>   at FinanceManagerTestProject.UtilsTest.calculateSimpleInterestTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 424
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5af87c55-1724-4f7c-9f21-87b76110e17c" testId="58cce904-9828-6476-faa3-66e34598f25e" testName="GenerateRepaymentSchedule_newTest" computerName="BAZAB-PC" duration="00:00:00.0096645" startTime="2012-11-19T05:40:12.1606256+00:00" endTime="2012-11-19T05:40:12.3716377+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5af87c55-1724-4f7c-9f21-87b76110e17c">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9089788e-be3f-447d-a20a-f939ccd6ac2c" testId="02894283-7803-dd7a-7ea3-3ba3d6a3562e" testName="GenerateContributionScheduleTest" computerName="BAZAB-PC" duration="00:00:00.0081082" startTime="2012-11-19T05:40:12.4426417+00:00" endTime="2012-11-19T05:40:12.6326526+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9089788e-be3f-447d-a20a-f939ccd6ac2c">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method FinanceManagerTestProject.UtilsTest.GenerateContributionScheduleTest threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at Utils.GenerateContributionSchedule(Int32 months, RepaymentFrequency repaymentFrequency, Investment currentLoan) in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\Utils.cs:line 200
+   at FinanceManagerTestProject.UtilsTest.GenerateContributionScheduleTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 160
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5348e6c1-7d65-4823-93da-38a98645a2ea" testId="dc4bbeeb-362f-1171-dd02-824975d30242" testName="calculateCompoundInterestTest" computerName="BAZAB-PC" duration="00:00:00.0026363" startTime="2012-11-19T05:40:12.6536538+00:00" endTime="2012-11-19T05:40:12.8616657+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5348e6c1-7d65-4823-93da-38a98645a2ea">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="974b453f-aee4-4b9b-906f-003bd0f6d828" testId="4550c9f7-b77c-4544-4b72-7c55b75ed06f" testName="RepaymentFreqNameTest" computerName="BAZAB-PC" duration="00:00:00.0453398" startTime="2012-11-19T05:40:12.9046682+00:00" endTime="2012-11-19T05:40:13.1436818+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="974b453f-aee4-4b9b-906f-003bd0f6d828">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method FinanceManagerTestProject.UtilsTest.RepaymentFreqNameTest threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at Utils.RepaymentFreqName(Int32 freqID) in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\LoanWebApplication4\Utils.cs:line 335
+   at FinanceManagerTestProject.UtilsTest.RepaymentFreqNameTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 337
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="911d9440-dc5b-4b03-9eba-7d97258c78f2" testId="03ab3a92-6c58-c9e5-e0fc-e44adc8f0fa3" testName="GetCompoundTypeTest" computerName="BAZAB-PC" duration="00:00:00.0040001" startTime="2012-11-19T05:40:13.1656831+00:00" endTime="2012-11-19T05:40:13.3756951+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="911d9440-dc5b-4b03-9eba-7d97258c78f2">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="34556376-8eed-418c-a789-92b2265cbbce" testId="c1c7ad23-43c8-a60e-880b-13ecf6f39e01" testName="GenerateRepaymentScheduleTest" computerName="BAZAB-PC" duration="00:00:00.1279132" startTime="2012-11-19T05:40:13.4076969+00:00" endTime="2012-11-19T05:40:13.7447162+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34556376-8eed-418c-a789-92b2265cbbce">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. A method that does not return a value cannot be verified.</Message>
+          <StackTrace>   at FinanceManagerTestProject.UtilsTest.GenerateRepaymentScheduleTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 180
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="012fbbb1-7033-44f5-b5e2-6b65ba9fd952" testId="d2fa2d4e-5d3c-0262-492b-8da40554e35b" testName="SearchMemberTest" computerName="BAZAB-PC" duration="00:00:00.5218819" startTime="2012-11-19T05:40:13.7577170+00:00" endTime="2012-11-19T05:40:14.4737579+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="012fbbb1-7033-44f5-b5e2-6b65ba9fd952">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="39b63361-e8af-4204-b92a-c548891d1cab" testId="b3eaa710-3326-3190-ba34-09584c654d6a" testName="HundredsTextTest" computerName="BAZAB-PC" duration="00:00:00.0197642" startTime="2012-11-19T05:40:14.5297611+00:00" endTime="2012-11-19T05:40:14.7757752+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39b63361-e8af-4204-b92a-c548891d1cab">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method FinanceManagerTestProject.UtilsTest.HundredsTextTest threw exception: 
+System.IndexOutOfRangeException: Index was outside the bounds of the array.</Message>
+          <StackTrace>   at Utils_Accessor.HundredsText(String value)
+   at FinanceManagerTestProject.UtilsTest.HundredsTextTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 257
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="68853b8c-87bb-4deb-90a5-1325048f39f4" testId="7b9879d0-8d5c-c42d-1c24-3c888980cae0" testName="GetDataContextTest" computerName="BAZAB-PC" duration="00:00:00.0032964" startTime="2012-11-19T05:40:14.8347786+00:00" endTime="2012-11-19T05:40:15.0927933+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68853b8c-87bb-4deb-90a5-1325048f39f4">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="49f6ec8a-c465-4c23-8f9f-76cd3a3dbe64" testId="cce72469-a327-54f1-1fa0-8f9bc87506c1" testName="GenerateAccountNumberTest" computerName="BAZAB-PC" duration="00:00:00.0026959" startTime="2012-11-19T05:40:15.1557969+00:00" endTime="2012-11-19T05:40:15.3378073+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49f6ec8a-c465-4c23-8f9f-76cd3a3dbe64">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;&gt;. Actual:&lt;20121119540150&gt;. </Message>
+          <StackTrace>   at FinanceManagerTestProject.UtilsTest.GenerateAccountNumberTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 141
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7e841eb4-652a-457e-962a-56137c4c6d70" testId="60c57dce-92d2-28df-c6f7-0bb9f6f3f651" testName="CalculateDefaultersInterestTest" computerName="BAZAB-PC" duration="00:00:00.0899221" startTime="2012-11-19T05:40:15.3618087+00:00" endTime="2012-11-19T05:40:15.6548255+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e841eb4-652a-457e-962a-56137c4c6d70">
+      <Output>
+        <ErrorInfo>
+          <Message>The communication channel with ASP.NET could not be configured. Requested Service not found</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="338c7892-49c0-451d-8d46-885080cc9495" testId="6f38b552-2b46-004d-e2d9-d951b9235b1d" testName="calculatePenaltyForEachLoanTest" computerName="BAZAB-PC" duration="00:00:00.0140883" startTime="2012-11-19T05:40:15.7748323+00:00" endTime="2012-11-19T05:40:15.9398418+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="338c7892-49c0-451d-8d46-885080cc9495">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method FinanceManagerTestProject.UtilsTest.calculatePenaltyForEachLoanTest threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>   at Utils_Accessor.calculatePenaltyForEachLoan(FinanceManagerDataContext dataContext, CompanyProfile cProfile, Nullable`1 days)
+   at FinanceManagerTestProject.UtilsTest.calculatePenaltyForEachLoanTest() in C:\Users\ZeaL\Desktop\Zeal v2\Zeal\Project\LoanWebApplication4\FinanceManagerTestProject\UtilsTest.cs:line 401
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
